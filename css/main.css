@@ -1,7 +1,7 @@
 
 
 body {
-    text-align: center;
+    text-align: left;
     margin: 60px auto;
     width: 70%;
 }
@@ -39,11 +39,18 @@ footer {
     font-size: .8em;
 }
 
-ul.posts {
-    margin: 20px auto 40px;
-    font-size: 1.5em;
+ul.blog {
+  margin: 20px auto 40px;
+  font-size: 1.0em;
+
 }
 
-ul.posts li {
-    list-style: none;
+ul.blog li {
+    list-style: circle;
+
+}
+
+div.post1 {
+  font-size: 0.6em;
+
 }
