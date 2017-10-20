@@ -1,6 +1,7 @@
 
 
 body {
+    background-color: #fdf6e3;
     text-align: left;
     margin: 60px auto;
     width: 70%;
@@ -29,6 +30,20 @@ h1 {
     font-size: 2em;
     font-family:'Garamond','Helvetica', 'Arial', 'Sans-Serif';
 }
+
+h2 {
+  font-size: 1.5em;
+  line-height: 1.4em;
+  color: #333;
+}
+
+p.meta {
+  font-size: 1.0em;
+  line-height: 1.4em;
+  color: #334;
+
+}
+
 p {
     font-size: 1.5em;
     line-height: 1.4em;
@@ -50,7 +65,7 @@ ul.blog li {
 
 }
 
-div.post1 {
+div.posts {
   font-size: 0.6em;
 
 }
