@@ -55,13 +55,14 @@ footer {
 }
 
 ul.blog {
+  text-align: left;
   margin: 20px auto 40px;
   font-size: 1.0em;
 
 }
 
 ul.blog li {
-    list-style: circle;
+    list-style: none;
 
 }
 

@@ -7,9 +7,9 @@ title: Blog
 	<ul class="blog">
 
 	  {% for post in site.posts %}
-	    <li><span>{{ post.date | date_to_string }}</span>
-				 »
-				 <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+	    <li><span>{{ post.date | date: "%-d %B %Y" }}</span>
+
+				 <a class="blogg" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
 			</li>
 	  {% endfor %}
 	</ul>
