@@ -15,7 +15,9 @@
 		<title>{{ page.title }} | JLSeto</title>
 		{% endif %}
 		<link rel="stylesheet" href="/css/main.css">
-{% include analytics.html %}
+    {% if jekyll.environment == 'production' %}
+    {% include analytics.html %}
+    {% endif %}
 	</head>
   <body>
 
