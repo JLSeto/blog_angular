@@ -1,3 +1,5 @@
 name: Hello World, JLSeto
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
+# Google Analytics
+google_analytics: UA-108597035-1
