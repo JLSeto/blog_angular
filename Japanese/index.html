@@ -1,0 +1,16 @@
+---
+layout: default
+title: Japanese
+---
+<div class="hello">
+	<h1>{{ page.title }}</h1>
+	<ul class="blog">
+
+	  {% for post in site.categories.blog2 %}
+	    <li><span>{{ post.date | date: "%Y年%m月%d日" }}</span>
+
+				 <a class="blogg" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+			</li>
+	  {% endfor %}
+	</ul>
+</div>

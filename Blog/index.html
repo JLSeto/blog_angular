@@ -1,12 +1,13 @@
 ---
 layout: default
 title: Blog
+category: blog1
 ---
 <div class="hello">
 	<h1>{{ page.title }}</h1>
 	<ul class="blog">
 
-	  {% for post in site.posts %}
+	  {% for post in site.categories.blog1 %}
 	    <li><span>{{ post.date | date: "%-d %B %Y" }}</span>
 
 				 <a class="blogg" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
