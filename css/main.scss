@@ -1,12 +1,13 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
+
+@import "typography";
 
 
-body {
-    text-align: left;
-    margin: 60px auto;
-    width: 70%;
-}
 nav ul, footer ul {
-    font-family:'Garamond','Helvetica', 'Arial', 'Sans-Serif';
+    font-family:'monospace';
     padding: 0px;
     list-style: none;
     font-weight: bold;
@@ -27,7 +28,7 @@ h1 {
     top: 10px;
     text-align: center;
     font-size: 2em;
-    font-family:'Garamond','Helvetica', 'Arial', 'Sans-Serif';
+    font-family:'Garamond','monospace';
 }
 
 h2 {
