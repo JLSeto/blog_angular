@@ -1,0 +1,25 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 2rem;
+}
+
+p.about1 {
+    font-size: 1.0em;
+    line-height: 1.4em;
+    color: #333;
+}
+
+p.about2 {
+    font-size: 1.0em;
+    line-height: 1.4em;
+    color: rgb(0, 179, 179);
+}
+
+h1.display-3 {
+    font-size: 2.0em;
+
+}
+
+#slidecontainer {
+    width: 100%; /* Width of the outside container */
+}
