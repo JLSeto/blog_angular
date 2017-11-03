@@ -1,6 +1,9 @@
 /* Move down content because we have a fixed navbar that is 50px tall */
-body {
-  padding-top: 2rem;
+
+div.j123{
+  position: absolute;
+  left:0px;
+  right:0px;
 }
 
 p.about1 {
@@ -17,7 +20,6 @@ p.about2 {
 
 h1.display-3 {
     font-size: 2.0em;
-
 }
 
 #slidecontainer {
