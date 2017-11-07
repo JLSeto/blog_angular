@@ -2,6 +2,29 @@
 layout: default2
 title: Japanese
 ---
+
+<div class="hello">
+	<h1>{{ page.title }}</h1>
+		<ul class="blog">
+			<div class="row justify-content-center">
+	    	<div class="col-lg-10 col-xl-8">
+	      	<table class="table table-sm">
+	        	<tbody>
+	  				{% for post in site.categories.blog1 %}
+						<tr>
+							<td class="align-middle"><span>{{ post.date | date: "%Y年%m月%d日" }}</span></td>
+				 			<td class="align-middle"><a class="blogg" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></td>
+						</tr>
+	  				{% endfor %}
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</ul>
+</div>
+
+
+<!--
 <div class="hello">
 	<h1>{{ page.title }}</h1>
 	<ul class="blog">
@@ -14,3 +37,4 @@ title: Japanese
 	  {% endfor %}
 	</ul>
 </div>
+-->
