@@ -1,0 +1,26 @@
+// This is a partial.
+// It lies in <source>/_sass, just waiting to be imported.
+// It does not contain the YAML front matter and has no corresponding output file in the built site.
+
+
+nav ul, footer ul {
+    font-family:'monospace';
+    padding: 0px;
+    list-style: none;
+    font-weight: normal;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 50px;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 30px;
+}
+
+footer {
+    border-top: 1px solid #d5d5d5;
+    font-size: 0.8em;
+}

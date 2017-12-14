@@ -1,5 +1,10 @@
 name: Hello World, JLSeto
-markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
+
 # Google Analytics
 #google_analytics: UA-108597035-1
