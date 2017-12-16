@@ -13,7 +13,7 @@ title: Blog
 	        	<tbody>
 	  				{% for post in site.categories.EngBlog %}
 						<tr>
-							<td class="align-middle"><span>{{ post.date | date: "%-d %B %Y" }}</span></td>
+							<td class="align-middle text-nowrap"><span class="text-monospace text-muted">{{ post.date | date: "%-d %B %Y" }}</span></td>
 				 			<td class="align-middle"><a class="blogg" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></td>
 						</tr>
 	  				{% endfor %}
