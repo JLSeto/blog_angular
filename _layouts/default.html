@@ -20,44 +20,9 @@
 	</head>
   <body>
 
-
-
-		<nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-		</button>
-
-		<!-- Brand -->
-		<a class="navbar-brand" href="/">J.Seto</a>
-
-		<!-- Links -->
-		<div class="collapse navbar-collapse" id="nav-content">
-		<ul class="navbar-nav mx-auto">
-		<li class="nav-item">
-		<a class="nav-link" href="/about">About</a>
-		</li>
-		<li class="nav-item">
-		<a class="nav-link" href="/projects">Projects</a>
-		</li>
-		<li class="nav-item">
-		<a class="nav-link" href="/Blog">Blog</a>
-		</li>
-    <li class="nav-item">
-		<a class="nav-link" href="/Japanese">日本語のブログ</a>
-		</li>
-		</ul>
-		</nav>
-
-
-		<div> {{ content }} </div>
-
-
-		<footer>
-				<ul>
-						<li>Email: <a href="mailto:seto.jimmy@gmail.com">seto.jimmy@gmail.com</a></li>
-						<li>Git: <a href="https://github.com/jlseto">github.com/jlseto</a></li>
-			</ul>
-		</footer>
+    {% include navbar.html %}
+    <div> {{ content }} </div>
+    {% include footer.html %}
 
 
     <!-- JavaScript: placed at the end of the document so the pages load faster -->

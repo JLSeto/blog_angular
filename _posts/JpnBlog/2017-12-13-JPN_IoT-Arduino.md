@@ -5,7 +5,7 @@ title: "^_^"
 date: 2017-12-13
 ---
 
-## バックグランド
+## 背景
 This is a generic IoT demo using Java to connect to the sensor.
 
 ## TLDR / How it Works:
