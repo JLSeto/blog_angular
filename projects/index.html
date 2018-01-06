@@ -3,12 +3,9 @@ layout: default
 title: Projects
 ---
 
-<ul>
-{% for uu in site.data.example %}
-  <li>
-    <a href="https://github.com/{{ uu.github }}">
-      {{ uu.name }}
-    </a>
-  </li>
-{% endfor %}
-</ul>
+
+{% include project-tile.html %}
+
+<!--
+{% assign item = site.data.project %}
+ <img src="{{item.CC2560.image}}" alt="CC2" style="width:500px;height:600px;"> -->
