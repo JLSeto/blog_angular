@@ -1,7 +1,7 @@
-CC2650:
+IoT CC2650 SensorTag:
   image: /assets/img/projects/cc2650_img.jpg
-  url: /projects/CC2560_Node-Red
+  url: /projects/CC2650_Node-Red
 
-Arduino101:
+IoT Arduino101:
   image: /assets/img/projects/arduino101_img.jpg
-  url: projects/CC2560_Node-Red
+  url: /projects/IoT-Arduino101
