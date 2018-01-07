@@ -3,38 +3,16 @@ layout: default
 title: Japanese
 ---
 
-<div class="hello">
+<div class="container">
 	<h1>{{ page.title }}</h1>
-		<ul class="blog">
-			<div class="row justify-content-center">
-	    	<div class="col-lg-10 col-xl-8">
-	      	<table class="table table-sm">
-	        	<tbody>
-	  				{% for post in site.categories.JpnBlog %}
-						<tr>
-							<td class="align-middle text-nowrap"><span class="text-monospace text-muted">{{ post.date | date: "%Y年%m月%d日" }}</span></td>
-				 			<td class="align-middle"><a class="blogg" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></td>
-						</tr>
-	  				{% endfor %}
-						</tbody>
-					</table>
-				</div>
-			</div>
-		</ul>
-</div>
-
-
-<!--
-<div class="hello">
-	<h1>{{ page.title }}</h1>
-	<ul class="blog">
-
-	  {% for post in site.categories.blog2 %}
-	    <li><span>{{ post.date | date: "%Y年%m月%d日" }}</span>
-
-				 <a class="blogg" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-			</li>
+		<table class="table table-sm">
+	  <tbody>
+	  {% for post in site.categories.JpnBlog %}
+		<tr>
+			<td class="align-middle text-nowrap"><span class="text-monospace text-muted">{{ post.date | date: "%Y年%m月%d日"  }}</span></td>
+			<td class="align-middle"><a class="blogg" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></td>
+		</tr>
 	  {% endfor %}
-	</ul>
+		</tbody>
+		</table>
 </div>
--->

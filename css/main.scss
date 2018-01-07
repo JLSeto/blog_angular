@@ -3,6 +3,8 @@
 # only Main files contain this front matter, not partials.
 ---
 
-@import "typography";
-@import "headersfooters";
-@import "about";
+@import "default";
+//@import "headersfooters";
+//@import "about";
+@import "navbar";
+@import "footer";

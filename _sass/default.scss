@@ -1,0 +1,22 @@
+// This is a partial.
+// It lies in <source>/_sass, just waiting to be imported.
+// It does not contain the YAML front matter and has no corresponding output file in the built site.
+
+h1 {
+    text-align: center;
+    font-size: 2.4em;
+    font-family:'Garamond','monospace';
+    margin-top: auto;
+}
+
+body {
+    text-align: left;
+    margin: 60px auto;
+    font-family: monospace;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 15.4px;
+    height:2000px;
+}
