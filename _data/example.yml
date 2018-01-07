@@ -1,6 +1,12 @@
+- url: https://youtube.com/
+  icon: fa fa-youtube-square
+  icon-lg: fa fa-3x fa-youtube-square
 - url: https://twitter.com/
   icon: fa fa-twitter-square
   icon-lg: fa fa-3x fa-twitter-square
 - url: https://github.com/
   icon: fa fa-github-square
   icon-lg: fa fa-3x fa-github-square
+- url: https://linkedin.com/
+  icon: fa fa-linkedin-square
+  icon-lg: fa fa-3x fa-linkedin-square
