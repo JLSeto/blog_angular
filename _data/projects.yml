@@ -5,3 +5,7 @@ IoT CC2650 SensorTag:
 IoT Arduino101:
   image: /assets/img/projects/arduino101_img.jpg
   url: /projects/IoT-Arduino101
+
+IoT ArduinoUno:
+  image: /assets/img/projects/arduino101_img.jpg
+  url: /projects/IoT-ArduinoUno

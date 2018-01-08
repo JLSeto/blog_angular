@@ -20,11 +20,11 @@
         <a class="nav-link" href="/Blog">Blog</a>
       </li>
       <li class="nav-item">
-        <span class="s"><a class="nav-link" href="/Japanese">日本語のブログ</a></span>
+        <a class="nav-link" href="/Japanese">日本語のブログ</a>
       </li>
   </ul>
   <ul class="navbar-nav ml-auto">
-    {% for item in site.data.example %}
+    {% for item in site.data.social %}
     <li>
       <a class="nav-link" href="{{ item.url }}">
         <i class="{{ item.icon }}"></i>

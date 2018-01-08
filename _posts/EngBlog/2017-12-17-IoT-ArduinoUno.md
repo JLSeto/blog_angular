@@ -1,8 +1,8 @@
 ---
 layout: post
 category: EngBlog
-title: "IoT using Java"
-date: 2017-12-13
+title: "IoT with ArduinoUno"
+date: 2017-12-17
 ---
 
 ## Background
