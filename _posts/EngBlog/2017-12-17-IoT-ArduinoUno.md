@@ -5,11 +5,8 @@ title: "IoT with ArduinoUno"
 date: 2017-12-17
 ---
 
-## Background
-This is a generic IoT demo using Java to connect to the sensor.
-
-## TLDR / How it Works:
-Arduino waits for a connection and a signal. Sends that data over Bluetooth to Java Server. Server processes data and displays over GUI.
+## Overview
+This is an  IoT example of sending and receiving data over bluetooth using bluecove.  The project uses an Arduino Uno connected to a few sensors.
 
 ## Hardware:
 ArduinoUno
