@@ -3,17 +3,20 @@
 // It does not contain the YAML front matter and has no corresponding output file in the built site.
 
 h1 {
-  text-align: left;
-  font-size: 2.4em;
-  font-family:'Garamond','monospace';
-  margin-top: auto;
+	font-family: monospace;
+	font-size: 23px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 23px;
 }
-
 h2 {
-  text-align: left;
-  font-size: 1.4em;
-  font-family:'Garamond','monospace';
-  margin-top: auto;
+	font-family: monospace;
+	font-size: 17px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 23px;
 }
 
 body {
