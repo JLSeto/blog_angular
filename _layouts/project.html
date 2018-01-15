@@ -2,4 +2,11 @@
 layout: default
 ---
 
-{{content}}
+{% assign project = site.data.projects[page.title] %}
+
+<div class="container">
+  <h1>{{page.title}}</h1>
+  <p>{{project.excerpt}}</p>
+  <a href="{{ project.git }}" class="btn btn-outline-primary btn-lg">View on git</a>
+  <a href="{{ project.blog }}" class="btn btn-outline-primary btn-lg">View on blog</a>
+</div>
