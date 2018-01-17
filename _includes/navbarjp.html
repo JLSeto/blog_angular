@@ -23,7 +23,7 @@
   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <span id="lanNavSel">日本語</span>
   </a>
-  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+  <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
     {% assign pages=site.pages | where:"ref", page.ref | sort: 'language' %}
     {% for page in pages %}  <a id="jp" class="dropdown-item" href="{{page.url | prepend: site.baseurl }}"> {{ page.language }} </a>{% endfor %}
 
