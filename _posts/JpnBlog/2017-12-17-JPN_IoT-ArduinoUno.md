@@ -1,8 +1,8 @@
 ---
-layout: post
-category: EngBlog
+layout: postjp
+category: JpnBlog
 title: "IoT with ArduinoUno"
-language: English
+language: Japanese
 ref: uno
 date: 2017-12-17
 ---

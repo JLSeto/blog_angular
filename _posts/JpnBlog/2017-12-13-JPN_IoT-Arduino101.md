@@ -1,8 +1,9 @@
 ---
-layout: post
+layout: postjp
 category: JpnBlog
 title: "IoT with Arduino101　「アルドゥイーノ」"
 language: Japanese
+ref: a101
 date: 2017-12-13
 ---
 

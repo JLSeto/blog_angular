@@ -24,7 +24,11 @@
     <span id="lanNavSel">日本語</span>
   </a>
   <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-    <a id="jp" class="dropdown-item" href="/">English</a>
+    {% assign pages=site.pages | where:"ref", page.ref | sort: 'language' %}
+    {% for page in pages %}  <a id="jp" class="dropdown-item" href="{{page.url | prepend: site.baseurl }}"> {{ page.language }} </a>{% endfor %}
+
+    {% assign posts=site.posts | where:"ref", page.ref | sort: 'language' %}
+    {% for post in posts %}  <a id="jp" class="dropdown-item" href="{{post.url | prepend: site.baseurl }}"> {{ post.language }} </a>{% endfor %}
   </div>
 </li>
   </ul>

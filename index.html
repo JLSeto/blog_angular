@@ -1,11 +1,30 @@
 ---
 layout: default
 title: JLSeto
+language: English
+ref: index
 ---
 
-<div class="container">
-<h1>{{page.title}}</h1>
-		<a href="/about">About Me</a><br>
-		<a href="/projects">Projects</a><br>
-		<a href="/Blog">Posts / Blog</a><br>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container text-center">
+    <h1 class="display-4">{{page.title}}</h1>
+    <p class="lead">Hi, I'm Jimmy Seto. Welcome to my blog. </p>
+		<p>If you want the Japanese Version of this site,
+			click the button below, or switch back and forth anytime with the navigation bar above. :)</p>
+		<a href="/jp" class="btn btn-outline-primary btn-sm">日本語はこちらへ</a>
+  </div>
+</div>
+
+<div class="container text-center">
+	<div class="row">
+		<div class="col">
+		<a href="/about" class="btn btn-outline-primary btn-lg">About Me</a>
+		</div>
+		<div class="col">
+		<a href="/projects" class="btn btn-outline-primary btn-lg">Projects</a>
+		</div>
+		<div class="col">
+		<a href="/Blog" class="btn btn-outline-primary btn-lg">Posts</a>
+		</div>
+	</div>
 </div>
