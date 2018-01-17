@@ -6,7 +6,7 @@
 </button>
 
 <!-- Brand -->
-<a class="navbar-brand" href="/en">J.Seto</a>
+<a class="navbar-brand" href="/">J.Seto</a>
 <!-- Links -->
 <div class="collapse navbar-collapse" id="nav-content">
   <ul class="navbar-nav">
@@ -19,6 +19,14 @@
       <li class="nav-item">
         <a class="nav-link" href="/Blog">Posts</a>
       </li>
+      <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span id="lanNavSel">English</span>
+  </a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    <a id="jp" class="dropdown-item" href="{{ page.url }}/jp">日本語</a>
+  </div>
+</li>
   </ul>
   <ul class="navbar-nav ml-auto">
     {% for item in site.data.social %}
@@ -33,3 +41,9 @@
 </div>
 </div>
 </nav>
+
+<script>
+$(function(){
+    $('.selectpicker').selectpicker();
+});
+</script>

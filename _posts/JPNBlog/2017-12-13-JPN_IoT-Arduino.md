@@ -2,6 +2,7 @@
 layout: post
 category: JpnBlog
 title: "IoT with Arduino101　「アルドゥイーノ」"
+language: Japanese
 date: 2017-12-13
 ---
 
