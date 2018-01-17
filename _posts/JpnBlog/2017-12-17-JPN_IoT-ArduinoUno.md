@@ -3,17 +3,17 @@ layout: postjp
 category: JpnBlog
 title: "IoT with ArduinoUno"
 language: Japanese
-ref: uno
+ref: Post-IoT-ArduinoUno
 date: 2017-12-17
 ---
 
-## Overview
+## 概要
 This is an  IoT example of sending and receiving data over bluetooth using bluecove.  The project uses an Arduino Uno connected to a few sensors.
 
-## Hardware:
+## 使ったハドウェア:
 ArduinoUno
 Bluetooth Module
 Laptop
 
-## Software:
+## 使ったソフトウエア:
 Java

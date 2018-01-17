@@ -1,20 +1,20 @@
 IoT-CC2650:
   image: /assets/img/projects/cc2650_img.jpg
   url: /projects/jp/IoT-CC2650
-  excerpt: 情報入っていない
+  excerpt: このプロジェクトはブルートゥースのデバイスからデータを取得して、ウェブサイトにそのデータを表示します。
   git: https://github.com/JLSeto/CC2560
   blog: /blog/2017/12/05/JPN_IoT-CC2650
 
 IoT-Arduino101:
   image: /assets/img/projects/arduino101_img.jpg
   url: /projects/jp/IoT-Arduino101
-  excerpt: 情報入っていない
+  excerpt: このプロジェクトはArduino101というマイクロコントローラからデータを取得して、ウェブサイトにそのデータを表示します。
   git: https://github.com/JLSeto/Arduino101
   blog: /blog/2017/12/13/JPN_IoT-Arduino101
 
 IoT-ArduinoUno:
   image: /assets/img/projects/arduino101_img.jpg
   url: /projects/jp/IoT-ArduinoUno
-  excerpt: 情報入っていない
+  excerpt: このプロジェクトはArduinoUnoというマイクロコントローラからデータを取得して、HMIにそのデータを表示します。
   git: https://github.com/JLSeto/Java_Bluetooth_test
   blog: /blog/2017/12/17/JPN_IoT-ArduinoUno
