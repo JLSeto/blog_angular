@@ -11,10 +11,10 @@ layout: feed
 	<id>http://jlseto.github.io/blog</id>
 	<author>
 		<name>Jimmy</name>
-		<email>jlseto@gmail.com</email>
+		<email>jseto@jimmyseto.com</email>
 	</author>
 
-	{% for post in site.categories.blog1 %}
+	{% for post in site.categories.Blog %}
 		<entry>
 			<title>{{ post.title }}</title>
 			<link href="http://jlseto.github.io{{ post.url }}"/>
