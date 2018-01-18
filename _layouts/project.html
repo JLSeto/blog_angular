@@ -6,7 +6,27 @@ layout: default
 
 <div class="container">
   <h1>{{page.title}}</h1>
-  <p>{{project.excerpt}}</p>
-  <a href="{{ project.git }}" class="btn btn-outline-primary btn-lg">View on git</a>
-  <a href="{{ project.blog }}" class="btn btn-outline-primary btn-lg">View on blog</a>
+  <p>{{project.excerpt}}</p><br>
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="mb-3">
+  <div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="{{project.youtube}}" allowfullscreen></iframe>
+  </div>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <div class="container text-center">
+  	<div class="row">
+  		<div class="col">
+  		<a href="{{project.git}}" class="btn btn-outline-primary btn-lg">View on git</a>
+  		</div>
+  		<div class="col">
+  		<a href="{{ project.blog }}" class="btn btn-outline-primary btn-lg">View on blog</a>
+  		</div>
+  	</div>
+  </div>
+
 </div>

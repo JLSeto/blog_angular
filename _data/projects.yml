@@ -4,6 +4,7 @@ IoT-CC2650:
   excerpt: This project pulls sensor data from a bluetooth device and displays the raw values on a webpage in real time.
   git: https://github.com/JLSeto/CC2560
   blog: /blog/2017/12/05/IoT-CC2650
+  youtube: https://youtube.com/embed/m8IHx6VPsnA
 
 IoT-Arduino101:
   image: /assets/img/projects/arduino101_img.jpg
@@ -11,6 +12,7 @@ IoT-Arduino101:
   excerpt: This project pulls sensor data from an Arduino101 and displays the data on a webpage in real time.
   git: https://github.com/JLSeto/Arduino101
   blog: /blog/2017/12/13/IoT-Arduino101
+  youtube: https://youtube.com/embed/m8IHx6VPsnA
 
 IoT-ArduinoUno:
   image: /assets/img/projects/arduino101_img.jpg
@@ -18,3 +20,4 @@ IoT-ArduinoUno:
   excerpt: This project takes the sensor data collected from and AduinoUno and displays the data on a GUI.
   git: https://github.com/JLSeto/Java_Bluetooth_test
   blog: /blog/2017/12/17/IoT-ArduinoUno
+  youtube: https://youtube.com/embed/m8IHx6VPsnA

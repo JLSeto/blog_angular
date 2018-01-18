@@ -10,9 +10,9 @@ date: 2017-12-13
 ## 背景
 This is a generic IoT demo using Java to connect to the sensor.
 
-## 使ったハードウェア:
+## ハードウェア:
 Arduino101
 Laptop
 
-## 使ったソフトウェア:
+## ソフトウェア:
 Node.js
