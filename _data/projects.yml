@@ -1,5 +1,5 @@
 IoT-CC2650:
-  image: /assets/img/projects/cc2650_img.jpg
+  image: /assets/img/projects/cc2650/cc2650.jpg
   url: /projects/IoT-CC2650
   excerpt: This project pulls sensor data from a bluetooth device and displays the raw values on a webpage in real time.
   git: https://github.com/JLSeto/CC2650
