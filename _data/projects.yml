@@ -7,7 +7,7 @@ IoT-CC2650:
   youtube: https://www.youtube.com/embed/2XyzMGU4GSo
 
 IoT-Arduino101:
-  image: /assets/img/projects/arduino101_img.jpg
+  image: /assets/img/projects/arduino101/arduino101.jpg
   url: /projects/IoT-Arduino101
   excerpt: This project pulls sensor data from an Arduino101 and displays the data on a webpage in real time.
   git: https://github.com/JLSeto/Arduino101
@@ -15,7 +15,7 @@ IoT-Arduino101:
   youtube: https://youtube.com/embed/m8IHx6VPsnA
 
 IoT-ArduinoUno:
-  image: /assets/img/projects/arduino101_img.jpg
+  image: /assets/img/projects/arduinouno/arduinouno.jpg
   url: /projects/IoT-ArduinoUno
   excerpt: This project takes the sensor data collected from and AduinoUno and displays the data on a GUI.
   git: https://github.com/JLSeto/Java_Bluetooth_test
