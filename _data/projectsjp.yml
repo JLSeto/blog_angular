@@ -1,5 +1,5 @@
 IoT-CC2650:
-  image: /assets/img/projects/cc2650_img.jpg
+  image: /assets/img/projects/cc2650/cc2650.jpg
   url: /projects/jp/IoT-CC2650
   excerpt: このプロジェクトはブルートゥースのデバイスからデータを取得して、ウェブサイトにそのデータを表示します。
   git: https://github.com/JLSeto/CC2650
