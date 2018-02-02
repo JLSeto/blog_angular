@@ -8,7 +8,7 @@ date: 2017-11-11
 ---
 
 ## 概要:
-このウェブサイトは[Jekyll](https://jekyllrb-ja.github.io/)で作られたWebサイトで、githubにホストされています。Jekyll（ジキル）というのは静的サイトの生成のツールで、CSSとHTMLとMarkdownでブログを簡単に作らせることができます。ネットに色々なチュータリアルや例がありますので、この投稿に作り方を不快に説明しないと思います。。。このサイトに対して、使ったフロントエンフレームワークドは[Bootstrap](https://getbootstrap.com/)です。Bootstrapを使われたWebサイトはモービル携帯に対応して、ナビゲーションバーやJumbotron（ジャンボトロン）を入れさせることができます。[SASS](http://sass-lang.com/)はCSS種類を整理させることができます。
+このウェブサイトは[Jekyll](https://jekyllrb-ja.github.io/)で作られたWebサイトで、githubにホストされています。Jekyllというのは静的サイトの生成のツールで、CSSとHTMLとMarkdownでブログを簡単に作らせることができます。ネットに色々なチュータリアルや例がありますので、この投稿に作り方を不快に説明しないと思います。。。このサイトに対して、使ったフロントエンフレームワークドは[Bootstrap](https://getbootstrap.com/)です。Bootstrapを使われたWebサイトはモービル携帯に対応して、ナビゲーションバーやJumbotron（ジャンボトロン）を入れさせることができます。[SASS](http://sass-lang.com/)はCSS種類を整理させることができます。
 
 このサイトの日本語のバジョンを作るために、それぞれの英語のページに日本語のページを作成しました。そして、それぞれのページは参照IDを割り当てて、ページを分類しました。JekyllのLiquidで、ページを分類するために、小さなスクリプトが書かれました。この機能はナビゲーションバーにアクセスできます。このウェブサイトのソースコードは[github](https://github.com/JLSeto/JLSeto.github.io)にあります。
 
