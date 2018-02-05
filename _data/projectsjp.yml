@@ -12,7 +12,7 @@ IoT-Arduino101:
   excerpt: このプロジェクトはArduino101というマイクロコントローラからデータを取得して、ウェブサイトにそのデータを表示します。
   git: https://github.com/JLSeto/Arduino101
   blog: /blog/2017/12/13/JPN_IoT-Arduino101
-  youtube: https://youtube.com/embed/m8IHx6VPsnA
+  youtube: https://www.youtube.com/embed/x961tXPIoRY
 
 IoT-ArduinoUno:
   image: /assets/img/projects/arduinouno/arduinouno.jpg
