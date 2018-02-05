@@ -1,7 +1,8 @@
 IoT-CC2650:
   image: /assets/img/projects/cc2650/cc2650.jpg
   url: /projects/IoT-CC2650
-  excerpt: This project reads the sensor data from a bluetooth device and displays the raw values on a webpage in real time.
+  excerpt: This is a project demo of the CC2650 SensorTag. The SensorTag sends sensor data to the TI SensorTag App, where the data is then pushed to IBM's cloud.
+   Our local server pulls the data from IBM's cloud, and displays it on our local webpage.
   git: https://github.com/JLSeto/CC2650
   blog: /blog/2017/12/05/IoT-CC2650
   youtube: https://www.youtube.com/embed/2XyzMGU4GSo
@@ -9,15 +10,18 @@ IoT-CC2650:
 IoT-Arduino101:
   image: /assets/img/projects/arduino101/arduino101.jpg
   url: /projects/IoT-Arduino101
-  excerpt: This project reads sensor data from an Arduino101 and displays the data on a webpage in real time.
+  excerpt: In this project, a client device reads sensor data from an Arduino101 via BLE and sends that data over wifi to a server where
+   the data gets stored in a database and displayed on a webpage in real time.
+   The user is also able to control the sampling rate of the Arduino101 with a click of a button from the webpage.
   git: https://github.com/JLSeto/Arduino101
   blog: /blog/2017/12/13/IoT-Arduino101
-  youtube: https://youtube.com/embed/m8IHx6VPsnA
+  youtube: https://www.youtube.com/embed/x961tXPIoRY
 
 IoT-ArduinoUno:
   image: /assets/img/projects/arduinouno/arduinouno.jpg
   url: /projects/IoT-ArduinoUno
-  excerpt: This project takes the sensor data collected from and AduinoUno and displays the data on a GUI.
+  excerpt: This is a project demo of Bluetooth Classic using Java and Bluecove.
+   The protocol used in this demo is RFCOMM.
   git: https://github.com/JLSeto/Java_Bluetooth_test
   blog: /blog/2017/12/17/IoT-ArduinoUno
   youtube: https://youtube.com/embed/m8IHx6VPsnA
