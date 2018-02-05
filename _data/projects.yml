@@ -7,7 +7,7 @@ IoT-CC2650:
   blog: /blog/2017/12/05/IoT-CC2650
   youtube: https://www.youtube.com/embed/2XyzMGU4GSo
 
-IoT-Arduino101:
+Protype of an IoT Platform using MEAN Stack REST API and Arduino101:
   image: /assets/img/projects/arduino101/arduino101.jpg
   url: /projects/IoT-Arduino101
   excerpt: In this project, a client device reads sensor data from an Arduino101 via BLE and sends that data over wifi to a server where
