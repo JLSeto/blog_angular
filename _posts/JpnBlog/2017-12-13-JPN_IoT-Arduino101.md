@@ -10,7 +10,7 @@ date: 2017-12-13
 すみません。日本語でまだ書かなかったです。すぐに書いて終わります。。。
 
 ## 概要:
-The [Arduino101](https://store.arduino.cc/usa/arduino-101) is a microcontroller board that is based off of the Intel Curie Module, which also includes the Intel Quark Microcontroller C1000.  This board comes with a 6-axis accelerometer/gyrometer and also has built in Bluetooth low Energy (BLE).  For this project, the Arduino101 is set up to collect acceleration and gyrometer data, and then advertise the data over BLE.  A client device is setup to connect to the Arduino101 via bluetooth, read the advertised data, and then send that data over wifi to a server. The server stores the received data in a database and also forwards it to a webpage where the data is graphed and displayed for the user.  From the webpage, a user can also control the Arduino101's sampling frequency.  With a click of a button, the user can send a new sampling time all the way back to the Arduino101. The change is nearly instantaneous and is can be visually seen on the webpage. The below diagram illustrates a general overview of this project.
+[Arduino101](https://store.arduino.cc/usa/arduino-101)はインテルCurieモジュールとインテルQuark C1000マイクロコントローラを採用したマイクロコントローラボードです。このボードには６軸加速度計とジャイロスコープとBluetooth Low Energyが備えています。本プロジェクトでは、
 
 <div class="mb-3">
 <figure>
