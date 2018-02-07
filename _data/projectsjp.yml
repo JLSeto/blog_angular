@@ -1,4 +1,6 @@
 IoT-CC2650:
+  title: IoT-CC2650
+  text: Node.jsとNode Redから作ったウェブアプリ
   image: /assets/img/projects/cc2650/cc2650.jpg
   url: /projects/jp/IoT-CC2650
   excerpt: 本件でTexas InstrumentsのCC2650SensorTagのデモプロジェクトです。センサタグはTI SensorTagの携帯アプリにまとめているデータを
@@ -9,6 +11,8 @@ IoT-CC2650:
   youtube: https://www.youtube.com/embed/2XyzMGU4GSo
 
 IoT-Arduino101:
+  title: IoT Mean アプリ
+  text: Arduino101のまとめているデータを取得し、RESTful APIから作ったIoTウェブアプリ
   image: /assets/img/projects/arduino101/arduino101.jpg
   url: /projects/jp/IoT-Arduino101
   excerpt: このプロジェクトではArduino101というマイクロコントローラからデータを取得して、ウェブサイトにそのデータを表示します。
@@ -17,6 +21,8 @@ IoT-Arduino101:
   youtube: https://www.youtube.com/embed/x961tXPIoRY
 
 IoT-ArduinoUno:
+  title: IoT-ArduinoUno
+  text: Java開発言語、RFCOMMプロトコルを使うIoTアプリ
   image: /assets/img/projects/arduinouno/arduinouno.jpg
   url: /projects/jp/IoT-ArduinoUno
   excerpt: このプロジェクトはArduinoUnoというマイクロコントローラからデータを取得して、HMIにそのデータを表示します。
