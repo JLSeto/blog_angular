@@ -63,3 +63,24 @@ body {
   line-height: 15.4px;
   height:2000px;
 }
+
+h9.card-text {
+	visibility: hidden;
+}
+
+div.card-overlay:hover .card-img-top{
+	transition: .5s ease;
+  background: yellow;
+}
+
+div.card-overlay:hover .card-text{
+	visibility: visible;
+	transition: .5s ease;
+	opacity: 1;
+	color: #ffffff;
+
+}
+
+div.card-overlay:hover .card-footer{
+	color: #000000;
+}

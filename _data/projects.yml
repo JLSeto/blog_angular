@@ -1,4 +1,6 @@
 IoT-CC2650:
+  title: IoT-CC2650
+  text: A web application built from Node.js and Node Red
   image: /assets/img/projects/cc2650/cc2650.jpg
   url: /projects/IoT-CC2650
   excerpt: This is a project demo of the CC2650 SensorTag. The SensorTag advertises it's sensor data over Bluetooth Low Energy. The TI SensorTag App is used
@@ -9,6 +11,8 @@ IoT-CC2650:
   youtube: https://www.youtube.com/embed/2XyzMGU4GSo
 
 IoT MEAN App (RESTful API server and Arduino101):
+  title: IoT Mean App
+  text: An IoT web application built using RESTful API
   image: /assets/img/projects/arduino101/arduino101.jpg
   url: /projects/IoT-Arduino101
   excerpt: In this project, a client device reads sensor data from an Arduino101 via BLE and sends that data over wifi to a server where
@@ -19,6 +23,8 @@ IoT MEAN App (RESTful API server and Arduino101):
   youtube: https://www.youtube.com/embed/x961tXPIoRY
 
 IoT-ArduinoUno:
+  title: IoT-ArduinoUno
+  text: Java application that demonstrates RFCOMM
   image: /assets/img/projects/arduinouno/arduinouno.jpg
   url: /projects/IoT-ArduinoUno
   excerpt: This is a project demo of Bluetooth Classic using Java and Bluecove.

@@ -1,11 +1,21 @@
-
-<div class="card-deck">
-<div class="card" style="width: 16rem;">
-  <a href='{{project.url}}'>
-  <img class="card-img-top" src="{{project.image}}" alt="Card image cap">
-  <div class="card-footer text-muted">
-    {{ProjectTitle}}
+<div class="card-overlay">
+  <div class="card-deck">
+    <div class="card" style="width: 16rem;">
+      <a href='{{project.url}}'>
+        <img class="card-img-top" src="{{project.image}}" alt="Card image cap">
+        <div class="card-img-overlay">
+          <h9 class="card-text">{{project.text}}</h9>
+        </div>
+      </a>
+      <div class="card-footer bg-transparent border-dark">{{project.title}}</div>
+    </div>
   </div>
-  </a>
 </div>
+
+
+
+<!--
+<div class="card-img-overlay h-100 d-flex flex-column justify-content-end">
+  <span class="pTitle"> {{ProjectTitle}}</span>
 </div>
+-->
