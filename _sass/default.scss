@@ -66,13 +66,12 @@ body {
 
 h9.card-text {
 	visibility: hidden;
-	color: white;
+	color: black;
 }
 
 div.card-overlay:hover .card-img-top{
 	transition: .5s ease;
 	opacity: 0.25;
-  background: yellow;
 }
 
 div.card-overlay:hover .card-text{
@@ -80,7 +79,6 @@ div.card-overlay:hover .card-text{
 	transition: .5s ease;
 	opacity: 1;
 	color: black;
-
 }
 
 div.card-overlay:hover .card-footer{
