@@ -22,13 +22,3 @@ IoT-Arduino101:
   git: https://github.com/JLSeto/Arduino101
   blog: /blog/2017/12/13/JPN_IoT-Arduino101
   youtube: https://www.youtube.com/embed/x961tXPIoRY
-
-IoT-ArduinoUno:
-  title: IoT-ArduinoUno
-  text: Java開発言語から建てられて、RFCOMMプロトコルを使うIoTアプリです。
-  image: /assets/img/projects/arduinouno/arduinouno.jpg
-  url: /projects/jp/IoT-ArduinoUno
-  excerpt: このプロジェクトはArduinoUnoというマイクロコントローラからデータを取得して、HMIにそのデータを表示します。
-  git: https://github.com/JLSeto/Java_Bluetooth_test
-  blog: /blog/2017/12/17/JPN_IoT-ArduinoUno
-  youtube: https://youtube.com/embed/m8IHx6VPsnA

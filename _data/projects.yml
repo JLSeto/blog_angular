@@ -21,14 +21,3 @@ IoT MEAN App (RESTful API server and Arduino101):
   git: https://github.com/JLSeto/Arduino101
   blog: /blog/2017/12/13/IoT-Arduino101
   youtube: https://www.youtube.com/embed/x961tXPIoRY
-
-IoT-ArduinoUno:
-  title: IoT-ArduinoUno
-  text: Java application that demonstrates RFCOMM
-  image: /assets/img/projects/arduinouno/arduinouno.jpg
-  url: /projects/IoT-ArduinoUno
-  excerpt: This is a project demo of Bluetooth Classic using Java and Bluecove.
-   The protocol used in this demo is RFCOMM.
-  git: https://github.com/JLSeto/Java_Bluetooth_test
-  blog: /blog/2017/12/17/IoT-ArduinoUno
-  youtube: https://youtube.com/embed/m8IHx6VPsnA
