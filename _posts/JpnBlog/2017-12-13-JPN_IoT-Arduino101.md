@@ -1,7 +1,7 @@
 ---
 layout: postjp
 category: JpnBlog
-title: "IoT with Arduino101　「アルドゥイーノ」"
+title: "IoT with Arduino101「アルドゥイーノ」"
 language: 日本語
 ref: Post-IoT-Arduino101
 date: 2017-12-13
@@ -10,20 +10,24 @@ date: 2017-12-13
 すみません。日本語でまだ書かなかったです。すぐに書いて終わります。。。
 
 ## 概要:
-[Arduino101](https://store.arduino.cc/usa/arduino-101)はインテルCurieモジュールとインテルQuark C1000マイクロコントローラを採用したマイクロコントローラボードです。このボードには６軸加速度計とジャイロスコープとBluetooth Low Energyが備えています。本プロジェクトでは、
+[Arduino101](https://store.arduino.cc/usa/arduino-101)はインテルCurieモジュールとインテルQuark C1000マイクロコントローラを採用したマイクロコントローラボードです。このボードには６軸加速度計とジャイロスコープとBluetooth Low Energyが備えています。本プロジェクトにて、Arduino101は６軸加速度計のデータをまとめて、BLEでそのデータをアドバタイズします。そして、クライアントデバイスはArduino101に探して、接続してから、そのまとめているセンサデータを読み、Wifiでサーバーに送ります。サーバーはそのデータをデータベースに素存して、ウエブサイトに転送し、図表されます。そして、ユーザーはウェブサイトにArduino101のサンプリングタイムを簡単に制御でき、一瞬に変更します。ウェブサイトに子の変更は見えます。下記の図面はプロジェクトの概要です。
+
 
 <div class="mb-3">
 <figure>
   <img class="mx-auto d-block mb-3" style="width: 800px;" src="/assets/img/projects/arduino101/arduino101_diagram_db.png" alt="a101_diagram">
-  <figcaption class="figure-caption text-center">Flow Diagram of Overall Project</figcaption>
+  <figcaption class="figure-caption text-center">概要図</figcaption>
 </figure>
 </div>
 
 ## やり方:
 ### Arduino101:
-Standard Arduino code along with the "CurieBLE" and "CurieIMU" libraries were used to write the code for the Arduino101 board.  The board is set up as a peripheral with one service that contains seven characteristics.  One characteristic is the sampling frequency (ts) which can be written to. The other six are the acceleration/gyrometer values (ax, ay, az, gx, gy, gz).  These service and characteristics are each assigned a UUID which is used by the client device to connect, subscribe, write, or receive notifications for a particular characteristic.  
+Arduino101ボードにArduino開発言語と「CurieBLE」と「CurieIMU」の図書館は使われました。このボードはペリフェラルとして、セットアップし、一つのサービスと七のcharacteristicがあります。一１つのcharacteristicはサンプリングしゅうはすうで、他の6他の6のは軸加速度計とジャイロスコープです。このサービスとcharacteristicsはそれぞれのUUIDを割り当てられまして、接続と登録とリード、ライトとお知らせがクライアントデバイスから使われました。
+
 
 ### Client Device:
+クライアントデバイスにNode.js開発言語とNobleモジュールは使われました。
+
 On my client device, Node.js along with [Noble](https://github.com/sandeepmistry/noble) is used to search and connect to the Arduino101 over BLE.  Once client device finds the Arduino101, it looks under the assigned Service UUID for each Characteristic UUID.  Notifications are then turned on for each characteristic, and [Socket.io](https://socket.io/) is used to forward the sampling frequency and accelerometer/gyrometer data to my server.  One interesting point to note here is the use of Socket.io over [WebSockets](https://github.com/websockets/ws).  The main reason why Socket.io is used over Websockets in this project is because of [multiplexing](https://en.wikipedia.org/wiki/Multiplexing).  Socket.io's API makes it quite easy to send multiple signals over one channel.  Doing this with Websockets is a little more complex.
 
 ### Server / Webpage:
