@@ -10,7 +10,7 @@ IoT-CC2650:
   blog: /blog/2017/12/05/JPN_IoT-CC2650
   youtube: https://www.youtube.com/embed/2XyzMGU4GSo
 
-IoT-Arduino101:
+IoT MEAN App (RESTful API server and Arduino101):
   title: IoT Mean アプリ
   text: Arduino101のセンサデータを取得し、RESTful APIから建てられるIoTウェブアプリです。
   image: /assets/img/projects/arduino101/arduino101.jpg
