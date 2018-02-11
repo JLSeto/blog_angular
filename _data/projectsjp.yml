@@ -1,15 +1,3 @@
-IoT-CC2650:
-  title: IoT-CC2650
-  text: Node.jsとNode Redから作ったウェブアプリです。
-  image: /assets/img/projects/cc2650/cc2650.jpg
-  url: /projects/jp/IoT-CC2650
-  excerpt: 本件でTexas InstrumentsのCC2650SensorTagのデモプロジェクトです。センサタグはTI SensorTagの携帯アプリにまとめているデータを
-   BluetoothLowEnergyで通信します。そして、アプリはそのデータをIBM Cloudに送ります。このプロジェクトでは、ローカルサーバは
-   IBM Cloudからデータを取得して、ウェブサイトに表示します。
-  git: https://github.com/JLSeto/CC2650
-  blog: /blog/2017/12/05/JPN_IoT-CC2650
-  youtube: https://www.youtube.com/embed/2XyzMGU4GSo
-
 IoT MEAN App (RESTful API server and Arduino101):
   title: IoT Mean アプリ
   text: Arduino101のセンサデータを取得し、RESTful APIから建てられるIoTウェブアプリです。
@@ -22,3 +10,15 @@ IoT MEAN App (RESTful API server and Arduino101):
   git: https://github.com/JLSeto/Arduino101
   blog: /blog/2017/12/13/JPN_IoT-Arduino101
   youtube: https://www.youtube.com/embed/x961tXPIoRY
+
+IoT-CC2650:
+  title: IoT-CC2650
+  text: Node.jsとNode Redから作ったウェブアプリです。
+  image: /assets/img/projects/cc2650/cc2650.jpg
+  url: /projects/jp/IoT-CC2650
+  excerpt: 本件でTexas InstrumentsのCC2650SensorTagのデモプロジェクトです。センサタグはTI SensorTagの携帯アプリにまとめているデータを
+   BluetoothLowEnergyで通信します。そして、アプリはそのデータをIBM Cloudに送ります。このプロジェクトでは、ローカルサーバは
+   IBM Cloudからデータを取得して、ウェブサイトに表示します。
+  git: https://github.com/JLSeto/CC2650
+  blog: /blog/2017/12/05/JPN_IoT-CC2650
+  youtube: https://www.youtube.com/embed/2XyzMGU4GSo
