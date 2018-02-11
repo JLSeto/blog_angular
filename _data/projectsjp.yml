@@ -1,5 +1,5 @@
 IoT MEAN App (RESTful API server and Arduino101):
-  title: IoT Mean アプリ
+  title: IoT M.E.A.N アプリ
   text: Arduino101のセンサデータを取得し、RESTful APIから建てられるIoTウェブアプリです。
   image: /assets/img/projects/arduino101/arduino101.jpg
   url: /projects/jp/IoT-Arduino101
