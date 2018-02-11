@@ -15,8 +15,8 @@ IoT MEAN App (RESTful API server and Arduino101):
   text: Arduino101のセンサデータを取得し、RESTful APIから建てられるIoTウェブアプリです。
   image: /assets/img/projects/arduino101/arduino101.jpg
   url: /projects/jp/IoT-Arduino101
-  excerpt: このプロジェクトでは、クライアントデバイスはBLEでArduino101のデータを取得して、データは
-   wifiでサーバーにそのデータを送ります。サーバーはセンサのデータをMongoDBデータベースに素存して、ウェブサイトに
+  excerpt: このプロジェクトでは、クライアントデバイスはBLEでArduino101のデータを取得して、データを
+   wifiでサーバーに送ります。サーバーはセンサのデータをMongoDBデータベースに素存し、ウェブサイトに
    リアルタイムで表示されています。ユーザーはウェブサイトにArduino101のサンプリングタイム
    を簡単に制御できます。
   git: https://github.com/JLSeto/Arduino101
