@@ -3,7 +3,7 @@ IoT-CC2650:
   text: A web application built from Node.js and Node Red
   image: /assets/img/projects/cc2650/cc2650.jpg
   url: /projects/IoT-CC2650
-  excerpt: This is a project demo of the CC2650 SensorTag. The SensorTag advertises it's sensor data over Bluetooth Low Energy. The TI SensorTag App is used
+  excerpt: This is a project demo of the CC2650 SensorTag. The SensorTag advertises its sensor data over Bluetooth Low Energy. The TI SensorTag App is used
    to read the data and then it push to IBM's cloud.
    Our local server pulls the data from IBM's cloud, and displays it on a local webpage.
   git: https://github.com/JLSeto/CC2650
