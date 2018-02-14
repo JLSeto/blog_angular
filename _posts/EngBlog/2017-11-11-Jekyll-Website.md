@@ -16,3 +16,5 @@ To create the Japanese version of this site, I create a duplicate entry for each
 ## References:
 
 [Setting up your GitHub Pages site locally with Jekyll](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/) <br>
+[Creating and Hosting a Personal Site on GitHub](http://jmcglone.com/guides/github-pages/) <br>
+[Making Jekyll multilingual](https://www.sylvaindurand.org/making-jekyll-multilingual/) <br>
