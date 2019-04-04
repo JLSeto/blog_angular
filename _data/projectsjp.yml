@@ -3,10 +3,11 @@ IoT MEAN App (RESTful API server and Arduino101):
   text: Arduino101のセンサデータを取得し、RESTful APIから建てられるIoTウェブアプリです。
   image: /assets/img/projects/arduino101/arduino101.jpg
   url: /projects/jp/IoT-Arduino101
-  excerpt: このプロジェクトでは、クライアントデバイスはBLEでArduino101のデータを取得して、データを
-   wifiでサーバーに送ります。サーバーはセンサのデータをMongoDBデータベースに素存し、ウェブサイトに
-   リアルタイムで表示されています。ユーザーはウェブサイトにArduino101のサンプリングタイム
-   を簡単に制御できます。
+  excerpt: こちらのプロジェクトでは、クライアントデバイスが BLE を通し Arduino101 のセンサーデータ
+   を取得し、そのデータを Wi-Fi を通しサーバーに送ります。サーバーは、センサーデータをデ
+   ータベースに保存し、リアルタイムで webpage 上にデータを表示します。また、ユーザーは
+   webpage 上のボタンをクリックするだけで、簡単にサンプリング周波数を制御することができ
+   ます。
   git: https://github.com/JLSeto/Arduino101
   blog: /blog/2017/12/13/JPN_IoT-Arduino101
   youtube: https://www.youtube.com/embed/x961tXPIoRY
@@ -16,9 +17,10 @@ IoT-CC2650:
   text: Node.jsとNode Redから作ったウェブアプリです。
   image: /assets/img/projects/cc2650/cc2650.jpg
   url: /projects/jp/IoT-CC2650
-  excerpt: 本件でTexas InstrumentsのCC2650SensorTagのデモプロジェクトです。センサタグはTI SensorTagの携帯アプリにまとめているデータを
-   BluetoothLowEnergyで通信します。そして、アプリはそのデータをIBM Cloudに送ります。このプロジェクトでは、ローカルサーバは
-   IBM Cloudからデータを取得して、ウェブサイトに表示します。
+  excerpt: こちらは、Texas Instruments 社の CC2650SensorTag のプロジェクトでもとなります。SensorTag
+   は Bluetooth Low Energy(BLE)を通し集めたセンサーデータを発信し、TI SensorTag App はデー
+   タの読み取り及び IBM 社の Cloud へ送信します。ローカルサーバーが IBM 社の Cloud から取得
+   したデータは、ローカル Webpage に表示されます。
   git: https://github.com/JLSeto/CC2650
   blog: /blog/2017/12/05/JPN_IoT-CC2650
   youtube: https://www.youtube.com/embed/2XyzMGU4GSo
