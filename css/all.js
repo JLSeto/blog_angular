@@ -2833,7 +2833,7 @@
     var content = {
       children: [],
       attributes: _objectSpread({}, extra.attributes, {
-        'data-prefix': prefix,
+        'data-prefix': 'fab',
         'data-icon': iconName,
         'class': attrClass,
         'role': extra.attributes.role || 'img',
