@@ -2073,7 +2073,7 @@
 
   var NAMESPACE_IDENTIFIER = '___FONT_AWESOME___';
   var UNITS_IN_GRID = 16;
-  var DEFAULT_FAMILY_PREFIX = 'fab';
+  var DEFAULT_FAMILY_PREFIX = 'fa';
   var DEFAULT_REPLACEMENT_CLASS = 'svg-inline--fa';
   var DATA_FA_I2SVG = 'data-fa-i2svg';
   var DATA_FA_PSEUDO_ELEMENT = 'data-fa-pseudo-element';
