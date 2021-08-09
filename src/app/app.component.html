@@ -1,0 +1,15 @@
+<div class="app-outer">
+  <!------------------------------------------------ Navigation Bar ----------------------------------------------->
+  <app-navbar></app-navbar>
+  <!------------------------------------------------ Navigation Bar ----------------------------------------------->
+  <mat-sidenav-container class="example-sidenav-container">
+    <mat-sidenav #sidenav mode="over">
+      <mat-nav-list>
+        <a routerLink="/" mat-list-item><div class="nav-mat-list">About</div></a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content id="mat-sidenav-content" #sbtop>
+      <router-outlet></router-outlet> <!-- web content-->
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

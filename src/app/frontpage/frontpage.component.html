@@ -1,0 +1,57 @@
+<div class="ftop-container" [ngClass]="hS.getInnerWidth() > 959 ? 'toptop' : 'toptopPadd'" fxLayout.gt-sm="row" fxLayoutAlign.gt-sm="center start" 
+    fxLayout.lt-md="column" fxLayoutAlign.lt-md="start center" fxLayoutGap="20px">
+        <div fxShow="true" fxHide.lt-md fxFlex="8"></div>
+    
+        <div fxFlex style="padding-left: 10px; padding-right: 10px;" 
+        fxLayout="row" fxLayoutAlign="start start" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center stretch" fxLayoutGap="20px">
+          <div fxFlex [ngStyle]="{'text-align': hS.getInnerHeight() > 959 ? 'start' : 'center'}">
+            <div fxLayout="row" fxLayoutAlign="center center">
+                <img [src]="faviconImg" class="nav-circle">
+            </div>
+            <h2>Hi, I'm Jimmy. Welcome to my blog.</h2>
+            <h3>
+                I like programming, electronics, and learning new technologies. 
+                The main purpose of this site is to keep notes on stuff I studied, personal projects, 
+                and other open source tech stuff.
+            </h3>
+            <div>
+              <h3 fxLayout="column" fxLayoutAlign="start start" fxLayoutAlign.lt-md="center center">
+                <!-- <div>Resume: <a class="frontpage-links" (click)="downloadResume()">View</a></div> -->
+                <div>Email: <a class="frontpage-links" [href]="mailTo" target="_blank">jseto@jimmyseto.com</a></div>
+              </h3>
+            </div>
+            <div fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="18px">
+                <div class="logos-signin">
+                    <a href="https://twitter.com/Jset0" target="_blank"><img [src]="'./assets/twitter.svg'" style="width: 100%; height: auto;"></a>
+                </div>
+                <div class="logos-signin">
+                    <a href="https://github.com/JLSeto" target="_blank"><img [src]="'./assets/github.png'" style="width: 100%; height: auto;"></a>
+                </div>
+                <div class="logos-signin">
+                    <a href="https://www.linkedin.com/in/jimmy-seto/" target="_blank"><img [src]="'./assets/linkedin.png'" style="width: 100%; height: auto;"></a>
+                </div>
+            </div>
+          </div>
+          <div fxFlex style="text-align: center;">
+            <div style="width: 100%;" fxLayout="column" fxLayoutAlign="start center">
+                <figure>
+                    <canvas #canvas></canvas>
+                    <figcaption style="font-size: 10px; text-align: right;">Udacity-Frogger</figcaption>
+                </figure>
+
+                <h3>{{gameMsg}} <span *ngIf="resetCounter > 0">{{resetCounter}}</span></h3>
+            </div>
+            <div fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="16px">
+                <div fxLayout="column" fxLayoutAlign="start start">
+                    <div>Wins: {{winCounter}}</div>
+                    <div>Losses: {{loseCounter}}</div>
+                </div>
+                <div>
+                    <button mat-stroked-button style="color: #ff4048; border-radius: 50px;" (click)="player.changeCharacter()">Change Character</button>
+                </div>
+            </div>
+          </div>
+        </div>
+    
+        <div fxShow="true" fxHide.lt-md fxFlex="8"></div>
+</div>
