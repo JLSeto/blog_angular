@@ -571,7 +571,6 @@ class Resources {
             urlOrArr.forEach((url) => {
                 this._load(url);
             });
-            console.log(this.get('./assets/frogger/Star.png'));
         }
         else {
             this._load(urlOrArr);

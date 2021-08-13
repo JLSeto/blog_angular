@@ -274,8 +274,6 @@ class Resources
             {
                 this._load(url);
             });
-
-            console.log(this.get('./assets/frogger/Star.png'));
         }
         else
         {
