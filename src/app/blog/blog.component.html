@@ -1,4 +1,4 @@
-<div class="ftop-container" [ngClass]="hS.getInnerWidth() > 959 ? 'toptop' : 'toptopPadd'" fxLayout.gt-sm="row" fxLayoutAlign.gt-sm="start start" 
+<div class="ftop-container-blog" [ngClass]="hS.getInnerWidth() > 959 ? 'toptop-blog' : 'toptopPadd'" fxLayout.gt-sm="row" fxLayoutAlign.gt-sm="start start" 
     fxLayout.lt-md="column" fxLayoutAlign.lt-md="start start">
         <div fxShow="true" fxHide.lt-lg fxFlex="4"></div>
     
@@ -14,7 +14,7 @@
                   </div>
               </div>
               <div *ngFor="let obj of arrProjects" style="margin-bottom: 8px;">
-                <mat-card class="mat-elevation-z0 projects-card" style="border: 0.5px solid #d5d5d5;" (click)="hS.routerNavigateProject(obj.link)" *ngIf="checkFilter(obj)">
+                <mat-card class="mat-elevation-z0 projects-card" style="border: 0.5px solid #d5d5d5;" (click)="hS.routerNavigateBlog(obj.link)" *ngIf="checkFilter(obj)">
                     <div fxLayout="row" fxLayoutAlign="start stretch" fxLayoutGap="5px" fxLayout.lt-sm="column" fxLayoutAlign.lt-sm="stretch center">
                         <div style="display: block; max-width: 250px; min-width: 50px;">
                             <img class="projects-img" [src]="obj.image">

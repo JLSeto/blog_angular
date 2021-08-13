@@ -53,4 +53,9 @@ export class HelperService
     this.router.navigate(['projects/' + link])
   }
 
+  public routerNavigateBlog(link: string) : void
+  {
+    this.router.navigate(['blog/' + link])
+  }
+
 }

@@ -24,7 +24,7 @@ export class ProjectsComponent implements OnInit
     constructor(public hS: HelperService, public route: ActivatedRoute, private router: Router, 
         private cfr: ComponentFactoryResolver, private dom: DomSanitizer)
     {
-        this.currentRoute = this.route.snapshot.paramMap.get('id');
+        this.currentRoute = this.route.snapshot.paramMap.get('title');
         this.arrProjects = 
         [
             {
@@ -39,8 +39,8 @@ export class ProjectsComponent implements OnInit
                                         { 
                                             heading   : 'Overview', 
                                             notes     : `This frogger game is based off of Udacity's frontend nanodegree arcade game.
-                                                        The project was initially completed in JavaScript but was ported over to 
-                                                        TypeScript and integrated with this website in Angular. The objective of the game is to 
+                                                        I initially did the project  in JavaScript but ported it over to 
+                                                        TypeScript so that it could be integrated with this website (which is based off Angular). The objective of the game is to 
                                                         reach the key without getting hit by
                                                         the moving bugs.  If you get hit by a bug, you will start back in your initial position.  If you
                                                         reach the key, the level will be regenerated but now with more bugs!`,
@@ -59,7 +59,7 @@ export class ProjectsComponent implements OnInit
                                     {
                                         heading   : 'Demo', 
                                         video     : '',
-                                        git       : ''
+                                        git       : 'https://github.com/JLSeto/JLSeto.github.io/tree/master/src/app/frogger'
                                     },
                 hardware       :    [],
                 software       :    [
@@ -71,6 +71,60 @@ export class ProjectsComponent implements OnInit
                 references     :    [
                                         {link: 'https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true', title: 'Project Guide'},
                                         {link: 'https://review.udacity.com/#!/projects/2696458597/rubric'     , title: 'Rubric'}
+                                    ],
+            },
+            {
+                type           : ["Web Components"],
+                image          : "/assets/voiceGengo/voiceGengo.png", 
+                title          : "Voice Gengo",
+                date           : new Date("March 08, 2021"),
+                subtitle       : "Full Stack Web Development, FrontEnd, BackEnd, OWASP", 
+                description    : "A community voice app for Japanese and English aimed to help improve pronunciation",
+                link           : "voiceGengo",
+                details        :    [
+                                        { 
+                                            heading   : 'Overview', 
+                                            notes     : `Voice Gengo was a full stack web development project I did with the aim
+                                                        of helping people speak a language better.  The app supports 2 languages:
+                                                        English and Japanese.  In the app you can create posts, write notebooks,
+                                                        and record yourself speaking the language you are learning.  You would be able to 
+                                                        share the above with Native Speakers of the language.  
+                                                        While all of these features were free to use, I did include paid
+                                                        features such as scheduling lessons with a tutor and getting voice recordings 
+                                                        or notebook entries corrected.  Unfortunately, the website was not a hit (possibly I had a very niche field
+                                                        or maybe I did not market it well enough).  However, going through the entire 
+                                                        process of building out the entire frontend and backend while following OWASP security practices
+                                                        and deploying it on Google Cloud Compute was a great learning experience.  The site is currently online 
+                                                        and is available at 
+                                                        <a href="https://voicegengo.com">VoiceGengo.com</a>`,
+                                            img        :    '/assets/voiceGengo/voiceGengoScreen.png'
+                                        },
+                                        {
+                                            heading   : 'About', 
+                                            notes     : `<a href="https://voicegengo.com/about">VoiceGengo.com/about</a>`
+                                        }
+                                    ],
+                demo           :    
+                                    {
+                                        heading   : '', 
+                                        video     : '',
+                                        git       : ''
+                                    },
+                hardware       :    [],
+                software       :    [
+                                       'TypeScript',
+                                        'MongoDB',
+                                        'Express',
+                                        'Angular',
+                                        'Node.js',
+                                        'Stripe API',
+                                        'Socket.io'
+
+                                    ],
+                references     :    [
+                                        {link: 'https://cheatsheetseries.owasp.org/', title: 'OWASP Cheat Sheet'},
+                                        {link: 'https://stripe.com/',                 title: 'Stripe'},
+                                        {link: 'https://socket.io/',                  title: 'Socket Io'},
                                     ],
             },
             {

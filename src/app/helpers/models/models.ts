@@ -29,6 +29,8 @@ export class Details
 {
     heading?        : string; 
     notes?          : string; 
+    list?           : string;
+    tableList?      : string[];
     img?            : string; 
     video?          : string; 
     git?            : string;

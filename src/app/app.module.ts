@@ -12,7 +12,8 @@ import { FrontpageComponent } from './frontpage/frontpage.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { DisplayDatePipe } from './helpers/pipes/displayDate.pipe';
 import { iFrameView } from './projects/iframe-view';
-import { FroggerComponent } from './frogger/frogger.component'
+import { FroggerComponent } from './frogger/frogger.component';
+import { BlogComponent } from './blog/blog.component'
 
 @NgModule({
   declarations: 
@@ -23,7 +24,8 @@ import { FroggerComponent } from './frogger/frogger.component'
     ProjectsComponent,
     DisplayDatePipe,
     iFrameView,
-    FroggerComponent
+    FroggerComponent,
+    BlogComponent
   ],
   imports: 
   [
