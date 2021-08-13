@@ -10,7 +10,7 @@
                 </button>
             </div>
             <span fxFlex></span>
-            <div *ngIf="!hS.getIsMobile() && router.url != '/'" fxLayout="row" fxLayoutGap="16px">
+            <div *ngIf="!hS.getIsMobile() && baseURL != '/'" fxLayout="row" fxLayoutGap="16px">
                 <div style="display: block;" *ngFor="let local of locSrc">
                     <a [href]="local.link" target="_blank"><img [src]="local.desc" class="nav-circle"></a>
                 </div>

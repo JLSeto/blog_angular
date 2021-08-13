@@ -1,5 +1,5 @@
-<div class="ftop-container" [ngClass]="hS.getInnerWidth() > 959 ? 'toptop' : 'toptopPadd'" fxLayout.gt-sm="row" fxLayoutAlign.gt-sm="center start" 
-    fxLayout.lt-md="column" fxLayoutAlign.lt-md="start center" fxLayoutGap="20px">
+<div class="ftop-container" [ngClass]="hS.getInnerWidth() > 959 ? 'toptop' : 'toptopPadd'" fxLayout.gt-sm="row" fxLayoutAlign.gt-sm="center center" 
+    fxLayout.lt-lg="column" fxLayoutAlign.lt-lg="start start" fxLayoutGap="20px">
         <div fxShow="true" fxHide.lt-md fxFlex="8"></div>
     
         <div fxFlex style="padding-left: 10px; padding-right: 10px;" 
@@ -32,24 +32,8 @@
                 </div>
             </div>
           </div>
-          <div fxFlex style="text-align: center;">
-            <div style="width: 100%;" fxLayout="column" fxLayoutAlign="start center">
-                <figure>
-                    <canvas #canvas></canvas>
-                    <figcaption style="font-size: 10px; text-align: right;">Udacity-Frogger</figcaption>
-                </figure>
-
-                <h3>{{gameMsg}} <span *ngIf="resetCounter > 0">{{resetCounter}}</span></h3>
-            </div>
-            <div fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="16px">
-                <div fxLayout="column" fxLayoutAlign="start start">
-                    <div>Wins: {{winCounter}}</div>
-                    <div>Losses: {{loseCounter}}</div>
-                </div>
-                <div>
-                    <button mat-stroked-button style="color: #ff4048; border-radius: 50px;" (click)="player.changeCharacter()">Change Character</button>
-                </div>
-            </div>
+          <div fxFlex>
+              <app-frogger></app-frogger>
           </div>
         </div>
     

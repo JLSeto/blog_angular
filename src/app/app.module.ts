@@ -10,6 +10,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FrontpageComponent } from './frontpage/frontpage.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { DisplayDatePipe } from './helpers/pipes/displayDate.pipe';
+import { iFrameView } from './projects/iframe-view';
+import { FroggerComponent } from './frogger/frogger.component'
 
 @NgModule({
   declarations: 
@@ -17,7 +20,10 @@ import { ProjectsComponent } from './projects/projects.component';
     AppComponent,
     NavbarComponent,
     FrontpageComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    DisplayDatePipe,
+    iFrameView,
+    FroggerComponent
   ],
   imports: 
   [

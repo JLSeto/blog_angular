@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Subject, Subscription } from 'rxjs';
+import { Router } from '@angular/router';
 import { ScreenDimensions } from '../models/models'
 
 @Injectable({
@@ -11,7 +11,7 @@ export class HelperService
   private  innerWidth  : number = window.innerWidth;
   private  innerHeight : number = window.innerHeight;
 
-  constructor()
+  constructor(private router: Router)
   {
     this.checkifMobile();
   }
@@ -46,6 +46,11 @@ export class HelperService
   public getInnerHeight() : number
   {
     return this.innerHeight;
+  }
+
+  public routerNavigateProject(link: string) : void
+  {
+    this.router.navigate(['projects/' + link])
   }
 
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { HelperService } from '../helpers/services/helper.service';
 import { SidenavService } from '../helpers/services/sidenav.service';
 
@@ -13,6 +14,8 @@ export class NavbarComponent implements OnInit
   public title    : string      = 'J.S';
   public navLinks : {desc: string, link: string}[];
   public locSrc   : {desc: string, link: string}[];
+  public baseURL  : string = '';
+  private _routerSub = Subscription.EMPTY; //Check when the navigation ends, and then get profile info to prevent multiple requests
 
   constructor(public hS: HelperService, public sidenav: SidenavService, public router: Router)
   {
@@ -27,9 +30,17 @@ export class NavbarComponent implements OnInit
     [
       {desc: 'About',           link: '/'             }, 
       {desc: 'Projects',        link: 'projects'      }, 
-      {desc: 'Web Components',  link: 'webcomponents' }, 
       {desc: 'Blog',            link: 'blog'          }
     ];
+    
+    this._routerSub = router.events.subscribe((val) => 
+    {
+      if(val instanceof NavigationEnd) 
+      {
+          this.baseURL = val.url.split('?')[0];
+      }
+    });
+
   }
 
   ngOnInit(): void 
