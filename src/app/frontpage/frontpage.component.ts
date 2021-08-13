@@ -9,8 +9,8 @@ import { HelperService } from '../helpers/services/helper.service';
 
 export class FrontpageComponent implements OnInit 
 {
-    public  faviconImg : string = './assets/favicon.png';
-    private resume     : string = './assets/Jimmy_ResumeS.pdf';
+    public  faviconImg : string = '/assets/favicon.png';
+    private resume     : string = '/assets/Jimmy_ResumeS.pdf';
     public  mailTo     : string = 'mailto:jseto@jimmyseto.com';
     
     constructor(public hS : HelperService, public cd: ChangeDetectorRef)

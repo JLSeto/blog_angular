@@ -35,23 +35,23 @@ export class FroggerComponent implements OnInit
         this.Resources = new Resources();
 
         this.Resources.load([
-        './assets/frogger/char-boy.png',
-        './assets/frogger/enemy-bug.png',
-        './assets/frogger/Heart.png',
-        './assets/frogger/stone-block.png',
-        './assets/frogger/char-cat-girl.png',
-        './assets/frogger/Gem Blue.png',
-        './assets/frogger/Key.png',
-        './assets/frogger/water-block.png',
-        './assets/frogger/char-horn-girl.png',
-        './assets/frogger/Gem Green.png',
-        './assets/frogger/Rock.png',
-        './assets/frogger/char-pink-girl.png',
-        './assets/frogger/Gem Orange.png',
-        './assets/frogger/Selector.png',
-        './assets/frogger/char-princess-girl.png',
-        './assets/frogger/grass-block.png',
-        './assets/frogger/Star.png',
+        '/assets/frogger/char-boy.png',
+        '/assets/frogger/enemy-bug.png',
+        '/assets/frogger/Heart.png',
+        '/assets/frogger/stone-block.png',
+        '/assets/frogger/char-cat-girl.png',
+        '/assets/frogger/Gem Blue.png',
+        '/assets/frogger/Key.png',
+        '/assets/frogger/water-block.png',
+        '/assets/frogger/char-horn-girl.png',
+        '/assets/frogger/Gem Green.png',
+        '/assets/frogger/Rock.png',
+        '/assets/frogger/char-pink-girl.png',
+        '/assets/frogger/Gem Orange.png',
+        '/assets/frogger/Selector.png',
+        '/assets/frogger/char-princess-girl.png',
+        '/assets/frogger/grass-block.png',
+        '/assets/frogger/Star.png',
         ]);
     }
 
@@ -160,12 +160,12 @@ export class FroggerComponent implements OnInit
     {
         let rowImages = 
         [
-        './assets/frogger/water-block.png',   // Top row is water
-        './assets/frogger/stone-block.png',   // Row 1 of 3 of stone
-        './assets/frogger/stone-block.png',   // Row 2 of 3 of stone
-        './assets/frogger/stone-block.png',   // Row 3 of 3 of stone
-        './assets/frogger/stone-block.png',   // Row 1 of 2 of grass
-        './assets/frogger/grass-block.png'    // Row 2 of 2 of grass
+        '/assets/frogger/water-block.png',   // Top row is water
+        '/assets/frogger/stone-block.png',   // Row 1 of 3 of stone
+        '/assets/frogger/stone-block.png',   // Row 2 of 3 of stone
+        '/assets/frogger/stone-block.png',   // Row 3 of 3 of stone
+        '/assets/frogger/stone-block.png',   // Row 1 of 2 of grass
+        '/assets/frogger/grass-block.png'    // Row 2 of 2 of grass
         ], numRows = 6, numCols = 5, row, col;
 
         this.ctx?.clearRect(0, 0, this.canvas.nativeElement.width, this.canvas.nativeElement.height);
@@ -176,7 +176,7 @@ export class FroggerComponent implements OnInit
             {
                 if(row == 0 && col == numCols - 1)
                 {
-                    this.ctx!.drawImage(this.Resources.get('./assets/frogger/stone-block.png'), col * 101, row * 83);
+                    this.ctx!.drawImage(this.Resources.get('/assets/frogger/stone-block.png'), col * 101, row * 83);
                 }
                 else
                 {
@@ -208,7 +208,7 @@ export class FroggerComponent implements OnInit
 
 class Enemy
 {
-    private sprite  : string = './assets/frogger/enemy-bug.png';
+    private sprite  : string = '/assets/frogger/enemy-bug.png';
     public x        : number = -101;
     public y        : number = 0;
     private speed   : number = Math.floor(Math.random()*400);
@@ -331,7 +331,7 @@ class Resources
 
 class Player
 {
-    private sprite  : string = './assets/frogger/char-boy.png';
+    private sprite  : string = '/assets/frogger/char-boy.png';
     private arrChar : string[];
     private charIdx : number = 0;
     public x        : number = 202;
@@ -342,11 +342,11 @@ class Player
     {
         this.arrChar = 
         [
-            './assets/frogger/char-boy.png',
-            './assets/frogger/char-cat-girl.png',
-            './assets/frogger/char-horn-girl.png',
-            './assets/frogger/char-pink-girl.png',
-            './assets/frogger/char-princess-girl.png',
+            '/assets/frogger/char-boy.png',
+            '/assets/frogger/char-cat-girl.png',
+            '/assets/frogger/char-horn-girl.png',
+            '/assets/frogger/char-pink-girl.png',
+            '/assets/frogger/char-princess-girl.png',
         ];
     }   
     
@@ -408,7 +408,7 @@ class Player
 class KeyItem
 {
     public disable  : boolean   = false;
-    private sprite  : string    = './assets/frogger/Key.png';
+    private sprite  : string    = '/assets/frogger/Key.png';
     public x        : number    = 404;
     public y        : number    = -40.5;
 

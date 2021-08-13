@@ -21,9 +21,9 @@ export class NavbarComponent implements OnInit
   {
     this.locSrc = 
     [
-      {desc: './assets/twitter.svg',      link: 'https://twitter.com/Jset0'               },  
-      {desc: './assets/github.png',       link: 'https://github.com/JLSeto'               }, 
-      {desc: './assets/linkedin.png',     link: 'https://www.linkedin.com/in/jimmy-seto/' }
+      {desc: '/assets/twitter.svg',      link: 'https://twitter.com/Jset0'               },  
+      {desc: '/assets/github.png',       link: 'https://github.com/JLSeto'               }, 
+      {desc: '/assets/linkedin.png',     link: 'https://www.linkedin.com/in/jimmy-seto/' }
     ];
 
     this.navLinks = 

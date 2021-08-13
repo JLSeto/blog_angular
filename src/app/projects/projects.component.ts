@@ -29,7 +29,7 @@ export class ProjectsComponent implements OnInit
         [
             {
                 type           : ["Web Components"],
-                image          : "./assets/frogger/froggerScreen.png", 
+                image          : "/assets/frogger/froggerScreen.png", 
                 title          : "Frogger",
                 date           : new Date("August 08, 2021"),
                 subtitle       : "TypeScript, JavaScript, HTML, CSS", 
@@ -75,7 +75,7 @@ export class ProjectsComponent implements OnInit
             },
             {
                 type           : ["Hardware"],
-                image          : "./assets/microController/arduino101/arduino101.jpg", 
+                image          : "/assets/microController/arduino101/arduino101.jpg", 
                 title          : "IoT MEAN App (RESTful API server and Arduino101)",
                 date           : new Date("December 12, 2017"),
                 subtitle       : "Bluetooth Low Energy, Arduino, Sensor Collection", 
@@ -94,7 +94,7 @@ export class ProjectsComponent implements OnInit
                                             the Arduino101’s sampling frequency. With a click of a button, the user can send a new sampling time all 
                                             the way back to the Arduino101. The change is instantaneous and can be visually seen on the webpage. 
                                             The below diagram illustrates a general overview of this project.`,
-                                            img       : './assets/microController/arduino101/arduino101_diagram_db.png'
+                                            img       : '/assets/microController/arduino101/arduino101_diagram_db.png'
                                         },
                                         {
                                             heading   : 'How it Works', 
@@ -148,7 +148,7 @@ export class ProjectsComponent implements OnInit
             },
             {
                 type           : ["Hardware"],
-                image          : "./assets/microController/cc2650/cc2650.jpg", 
+                image          : "/assets/microController/cc2650/cc2650.jpg", 
                 title          : "IoT-CC2650",
                 date           : new Date("December 5, 2017"),
                 subtitle       : "IoT with Texas Instrument CC2650 SensorTag", 
@@ -164,7 +164,7 @@ export class ProjectsComponent implements OnInit
                                                         then be used to analyze the data as well as write and host our IoT application. However, in this project, Node-Red and 
                                                         Websockets are used to pull the data from IBM’s website and display it in our own website. 
                                                         The below digram shows and an overall view of this demo and the part this project is focused on.`,
-                                            img       : "./assets/microController/cc2650/cc2650_diagram.png"
+                                            img       : "/assets/microController/cc2650/cc2650_diagram.png"
                                         },
                                         {
                                             heading   : 'How it Works', 
@@ -175,7 +175,7 @@ export class ProjectsComponent implements OnInit
                                                         then forwards that data via websockets to my website where the raw values are displayed using some simple 
                                                         javascript, css, and html. Google Charts is also used in my website to graph the x, y, and z acceleration data 
                                                         in real time. This project is available on github and a demo is available on youtube.`,
-                                            img       : "./assets/microController/cc2650/middleware.png"
+                                            img       : "/assets/microController/cc2650/middleware.png"
                                         },
 
                                     ],
