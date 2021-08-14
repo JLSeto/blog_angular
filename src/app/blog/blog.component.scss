@@ -10,7 +10,7 @@
   }
 
   .toptop-blog {
-    background: linear-gradient(to right, #FDF6E3 50%, #EEE8D5 0%);
+    background: linear-gradient(to right, #ffffff 50%, #ffffff 0%);
     min-height: calc(100vh - 40px);
     margin-bottom: 10px;
     padding-top: 25px;
@@ -137,3 +137,15 @@
     margin-bottom: 8px;
     text-overflow: ellipsis;
 }
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }

@@ -14,9 +14,9 @@
                   </div>
               </div>
               <div *ngFor="let obj of arrProjects" style="margin-bottom: 8px;">
-                <mat-card class="mat-elevation-z0 projects-card" style="border: 0.5px solid #d5d5d5;" (click)="hS.routerNavigateBlog(obj.link)" *ngIf="checkFilter(obj)">
+                <mat-card class="mat-elevation-z0 projects-card" style="border: 0.5px solid #d5d5d5;" (click)="hS.routerNavigateNotes(obj.link)" *ngIf="checkFilter(obj)">
                     <div fxLayout="row" fxLayoutAlign="start stretch" fxLayoutGap="5px" fxLayout.lt-sm="column" fxLayoutAlign.lt-sm="stretch center">
-                        <div style="display: block; max-width: 250px; min-width: 50px;">
+                        <div style="display: block; max-width: 250px; min-width: 0px;">
                             <img class="projects-img" [src]="obj.image">
                         </div>
                         <div fxFlex fxLayout="column" fxLayoutAlign="start start" style="padding-left: 4px">
@@ -35,10 +35,57 @@
                     <h1 style="text-align: center;">{{obj.title}}</h1>
                     <div *ngFor="let detail of obj.details; let i = index">
                         <h2>{{detail.heading}}</h2>
-                        <div style="margin-bottom: 12px; line-height: 1.6;" [innerHTML]="detail.notes"></div>
-                        <div fxLayout="row" style="margin-bottom: 12px">
+                        <div *ngIf="detail.notes" style="margin-bottom: 12px; line-height: 1.6;" [innerHTML]="detail.notes"></div>
+                        <div *ngIf="detail.list" style="margin-bottom: 12px; line-height: 1.6;">
+                            <ul>
+                                <li *ngFor="let item of detail.list">
+                                    {{item}}
+                                </li>
+                            </ul>
+                        </div>
+                        <div *ngIf="detail.tableList" style="margin-bottom: 12px; line-height: 1.6;">
+                            <table>
+                                <tr *ngIf="detail.tableListHead">
+                                    <th>Function</th>
+                                    <th>
+                                        {{detail.tableListHead.rightHead}}
+                                    </th>
+                                    <th>
+                                        {{detail.tableListHead.right2Head}}
+                                    </th>
+                                </tr>
+                                <tr *ngFor="let item of detail.tableList">
+                                    <td>
+                                        {{item.left}}
+                                    </td>
+                                    <td>
+                                        {{item.right}}
+                                    </td>
+                                    <td *ngIf="item.right2">
+                                        {{item.right2}}
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div *ngIf="detail.tagListLinks" style="margin-bottom: 12px; line-height: 1.6;">
+                            <div fxLayout="row wrap" fxLayoutGap="4px" style="margin-bottom: 12px">
+                                <div *ngFor="let item of detail.tagListLinks">
+                                    <button mat-stroked-button style="border-radius: 50px; background-color: white; margin-bottom: 8px;">
+                                        <a [href]="item.link" target="_blank" style="color: #1e88e5; text-decoration: none;">{{item.title}}</a>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div *ngIf="detail.tagList" style="margin-bottom: 12px; line-height: 1.6;">
+                            <div fxLayout="row wrap" fxLayoutGap="4px" style="margin-bottom: 12px">
+                                <div *ngFor="let item of detail.tagList">
+                                    <button mat-stroked-button class="projects-button-no-link">{{item}}</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div *ngIf="detail.img" fxLayout="row" style="margin-bottom: 12px">
                             <span fxFlex></span>
-                            <div *ngIf="detail.img" style="display: block; max-width: 800px; min-width: 50px;">
+                            <div style="display: block; max-width: 800px; min-width: 50px;">
                                 <img [src]="detail.img" class="projects-img">
                             </div>
                             <span fxFlex></span>

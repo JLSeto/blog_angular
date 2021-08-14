@@ -29,8 +29,11 @@ export class Details
 {
     heading?        : string; 
     notes?          : string; 
-    list?           : string;
-    tableList?      : string[];
+    list?           : string[];
+    tableListHead?  : {rightHead?: string, right2Head?: string};
+    tableList?      : {left: string, right: string, right2?: string}[];
+    tagList?        : string[];
+    tagListLinks?   : {link: string, title: string}[];
     img?            : string; 
     video?          : string; 
     git?            : string;

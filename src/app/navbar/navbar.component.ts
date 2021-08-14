@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { NavigationEnd, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { HelperService } from '../helpers/services/helper.service';
@@ -17,7 +18,7 @@ export class NavbarComponent implements OnInit
   public baseURL  : string = '';
   private _routerSub = Subscription.EMPTY; //Check when the navigation ends, and then get profile info to prevent multiple requests
 
-  constructor(public hS: HelperService, public sidenav: SidenavService, public router: Router)
+  constructor(public hS: HelperService, public sidenav: SidenavService, public router: Router, private tS: Title)
   {
     this.locSrc = 
     [
@@ -30,14 +31,17 @@ export class NavbarComponent implements OnInit
     [
       {desc: 'About',           link: '/'             }, 
       {desc: 'Projects',        link: 'projects'      }, 
-      {desc: 'Blog',            link: 'blog'          }
+      {desc: 'Study Notes',     link: 'notes'         }
     ];
     
     this._routerSub = router.events.subscribe((val) => 
     {
       if(val instanceof NavigationEnd) 
       {
+          let url = val.url.split('/');
           this.baseURL = val.url.split('?')[0];
+
+          this.tS.setTitle("Jimmy S. " + String(url[1]).charAt(0).toUpperCase() + String(url[1]).slice(1));
       }
     });
 
