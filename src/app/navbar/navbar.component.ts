@@ -5,6 +5,8 @@ import { Subscription } from 'rxjs';
 import { HelperService } from '../helpers/services/helper.service';
 import { SidenavService } from '../helpers/services/sidenav.service';
 
+declare let gtag: Function;
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -36,13 +38,12 @@ export class NavbarComponent implements OnInit
     
     this._routerSub = router.events.subscribe((val) => 
     {
-      if(val instanceof NavigationEnd) 
-      {
-          let url = val.url.split('/');
-          this.baseURL = val.url.split('?')[0];
-
-          this.tS.setTitle("Jimmy S. " + String(url[1]).charAt(0).toUpperCase() + String(url[1]).slice(1));
-      }
+        if(val instanceof NavigationEnd) 
+        {
+            let url = val.url.split('/');
+            this.baseURL = val.url.split('?')[0];
+            this.setTitle(url);
+        }
     });
 
   }
@@ -55,6 +56,19 @@ export class NavbarComponent implements OnInit
   toggle()
   {
     this.sidenav.toggle();
+  }
+
+  setTitle(url : string[]) : void
+  {
+    this.tS.setTitle("Jimmy S. " + String(url[1]).charAt(0).toUpperCase() + String(url[1]).slice(1));
+  }
+
+  configureGTAG(event : NavigationEnd)
+  {
+    gtag('config', 'G-JBDYNJFL65', 
+    {
+        'page_path': event.urlAfterRedirects
+    });
   }
 
 }
