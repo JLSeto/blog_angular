@@ -8,15 +8,28 @@ import { HelperService } from '../helpers/services/helper.service';
 })
 export class FroggerComponent implements OnInit 
 {
-    //Display Messages
-    public  gameMsg    : string = '';
-
     //Drawings
     @ViewChild('canvas', { static: true }) canvas!: ElementRef<HTMLCanvasElement>;
-    private ctx: CanvasRenderingContext2D | null = null as any;
+
+    public engine: Engine = null as any;
+
+    constructor(public hS: HelperService, public cd: ChangeDetectorRef){ }
+
+    ngOnInit(): void
+    {
+        this.engine = new Engine(this.canvas, this.cd);
+    }
+}
+
+// Engine
+class Engine
+{
+    //Game Message 2 Way Binding
+    public  gameMsg    : string = '';
 
     //Resources
-    public Resources: Resources;
+    public Resources: Resources = new Resources();
+    private ctx: CanvasRenderingContext2D | null = null as any;
 
     //Engine
     public lastTime: number = Date.now();
@@ -30,36 +43,49 @@ export class FroggerComponent implements OnInit
     public winCounter   : number = 0;
     public loseCounter  : number = 0;
 
-    constructor(public hS: HelperService, public cd: ChangeDetectorRef)
+    constructor(private canvas : ElementRef<HTMLCanvasElement>, public cd: ChangeDetectorRef)
     {
-        this.Resources = new Resources();
+        this.initializeResources();
+        this.initializeCanvas();
+        this.initializeApp();
+        this.addEventListeners();
 
-        this.Resources.load([
-        '/assets/frogger/char-boy.png',
-        '/assets/frogger/enemy-bug.png',
-        '/assets/frogger/Heart.png',
-        '/assets/frogger/stone-block.png',
-        '/assets/frogger/char-cat-girl.png',
-        '/assets/frogger/Gem Blue.png',
-        '/assets/frogger/Key.png',
-        '/assets/frogger/water-block.png',
-        '/assets/frogger/char-horn-girl.png',
-        '/assets/frogger/Gem Green.png',
-        '/assets/frogger/Rock.png',
-        '/assets/frogger/char-pink-girl.png',
-        '/assets/frogger/Gem Orange.png',
-        '/assets/frogger/Selector.png',
-        '/assets/frogger/char-princess-girl.png',
-        '/assets/frogger/grass-block.png',
-        '/assets/frogger/Star.png',
-        ]);
+        //Start the game
+        this.Resources.onReady(this.init); 
     }
 
-    ngOnInit(): void
+    private initializeResources() : void
+    {
+        this.Resources.load([
+            '/assets/frogger/char-boy.png',
+            '/assets/frogger/enemy-bug.png',
+            '/assets/frogger/Heart.png',
+            '/assets/frogger/stone-block.png',
+            '/assets/frogger/char-cat-girl.png',
+            '/assets/frogger/Gem Blue.png',
+            '/assets/frogger/Key.png',
+            '/assets/frogger/water-block.png',
+            '/assets/frogger/char-horn-girl.png',
+            '/assets/frogger/Gem Green.png',
+            '/assets/frogger/Rock.png',
+            '/assets/frogger/char-pink-girl.png',
+            '/assets/frogger/Gem Orange.png',
+            '/assets/frogger/Selector.png',
+            '/assets/frogger/char-princess-girl.png',
+            '/assets/frogger/grass-block.png',
+            '/assets/frogger/Star.png',
+            ]);
+    }
+
+    private initializeCanvas() : void
     {
         this.ctx = this.canvas.nativeElement.getContext('2d');
         this.canvas.nativeElement.width = 505;
         this.canvas.nativeElement.height = 606;
+    }
+
+    private initializeApp() : void
+    {
         this.keyItem = new KeyItem(this.ctx, this.Resources, this.cd);
         this.player = new Player(this.ctx, this.Resources, this.cd, this.keyItem);
 
@@ -67,9 +93,10 @@ export class FroggerComponent implements OnInit
         {
             this.allEnemies.push(new Enemy(this.ctx, this.Resources, this.cd, this.player));
         }
-        
-        this.Resources.onReady(this.init); //initialize
+    }
 
+    private addEventListeners() : void
+    {
         document.addEventListener('keyup', (e) => 
         {
             this.player.handleInput(e.key);
@@ -82,33 +109,17 @@ export class FroggerComponent implements OnInit
         }, false);
     }
 
-    //Start Engine
-    public main = () =>
-    {
-        let now = Date.now();
-        let dt = (now - this.lastTime) / 1000.0;
-        this.update(dt);
-        this.render();
-        this.lastTime = now;
-        window.requestAnimationFrame(this.main);
-    }
-
-    public update(dt : number)
+    private update(dt : number)
     {
         this.checkCollisions();
         this.updateEntities(dt);
     }
     
-    public checkCollisions()
+    private checkCollisions()
     {
         if(this.gotKey)
         {
             return;
-        }
-
-        if(true)
-        {
-
         }
 
         if(this.player.x == this.keyItem.x && this.player.y == this.keyItem.y)
@@ -141,7 +152,7 @@ export class FroggerComponent implements OnInit
         }
     }
 
-    public updateEntities(dt : number)
+    private updateEntities(dt : number)
     {
         this.allEnemies.forEach((enemy) => 
         {
@@ -187,7 +198,7 @@ export class FroggerComponent implements OnInit
         this.renderEntities();
     }
 
-    renderEntities()
+    private renderEntities()
     {
         this.allEnemies.forEach(function(enemy : Enemy)
         {
@@ -198,62 +209,25 @@ export class FroggerComponent implements OnInit
         this.keyItem.render();
     }
 
-    init = () =>
+    //Start Engine
+    private main = () =>
     {
-        //this.reset();
+        let now = Date.now();
+        let dt = (now - this.lastTime) / 1000.0;
+        this.update(dt);
+        this.render();
+        this.lastTime = now;
+        window.requestAnimationFrame(this.main);
+    }
+
+    private init = () =>
+    {
         this.lastTime = Date.now();
         this.main();
     }
 }
 
-class Enemy
-{
-    private sprite  : string = '/assets/frogger/enemy-bug.png';
-    public x        : number = -101;
-    public y        : number = 0;
-    private speed   : number = Math.floor(Math.random()*400);
-
-    constructor(private ctx: CanvasRenderingContext2D | null, private resources: Resources, private cd: ChangeDetectorRef, private player: Player)
-    {
-        this.y = this.randomEnemies();
-    }
-
-    public randomEnemies = function() : number
-    {
-        var set = [42.5, 125.5, 208.5, 291.5];
-        var rndm =  Math.floor(Math.random()*4);
-        return set[rndm];
-    }
-
-    public update = (dt: number) : boolean =>
-    {
-        this.x += this.speed * dt;
-        this.x = (this.x > 505) ? (-101) : (this.x + 1);
-
-        let minRange = Math.floor(this.x - 50);
-        let maxRange = Math.floor(this.x + 50);
-    
-        if(this.y == this.player.y)
-        {
-          if((this.player.x > minRange && this.player.x < this.x) || (this.player.x > this.x && this.player.x < maxRange))
-          {
-            this.player.x = 202; //0 is first column. 101 is 2nd.
-            this.player.y = 374.5; //41.5 is middle of a row 41.5*9
-            return true;
-          }
-        }
-
-        return false;
-    }
-
-    public render = () : void => 
-    {
-        this.ctx?.drawImage(this.resources.get(this.sprite), this.x, this.y);
-        this.ctx?.save();
-        //this.cd.detectChanges();
-    }
-}
-
+// Resources
 class Resources
 {
     //Resources
@@ -329,6 +303,7 @@ class Resources
     }
 }
 
+//App
 class Player
 {
     private sprite  : string = '/assets/frogger/char-boy.png';
@@ -402,6 +377,54 @@ class Player
     {
         this.charIdx = (this.charIdx >= this.arrChar.length - 1) ? 0 : (this.charIdx + 1);
         this.sprite = this.arrChar[this.charIdx];
+    }
+}
+
+class Enemy
+{
+    private sprite  : string = '/assets/frogger/enemy-bug.png';
+    public x        : number = -101;
+    public y        : number = 0;
+    private speed   : number = Math.floor(Math.random()*400);
+
+    constructor(private ctx: CanvasRenderingContext2D | null, private resources: Resources, private cd: ChangeDetectorRef, private player: Player)
+    {
+        this.y = this.randomEnemies();
+    }
+
+    public randomEnemies = function() : number
+    {
+        var set = [42.5, 125.5, 208.5, 291.5];
+        var rndm =  Math.floor(Math.random()*4);
+        return set[rndm];
+    }
+
+    public update = (dt: number) : boolean =>
+    {
+        this.x += this.speed * dt;
+        this.x = (this.x > 505) ? (-101) : (this.x + 1);
+
+        let minRange = Math.floor(this.x - 50);
+        let maxRange = Math.floor(this.x + 50);
+    
+        if(this.y == this.player.y)
+        {
+          if((this.player.x > minRange && this.player.x < this.x) || (this.player.x > this.x && this.player.x < maxRange))
+          {
+            this.player.x = 202; //0 is first column. 101 is 2nd.
+            this.player.y = 374.5; //41.5 is middle of a row 41.5*9
+            return true;
+          }
+        }
+
+        return false;
+    }
+
+    public render = () : void => 
+    {
+        this.ctx?.drawImage(this.resources.get(this.sprite), this.x, this.y);
+        this.ctx?.save();
+        //this.cd.detectChanges();
     }
 }
 
