@@ -138,8 +138,11 @@ export class BlogComponent implements OnInit
                                             tagList   : [`Number of Islands`, 'Percolation']
                                         },
                                         {
-                                            heading   : 'Implementation', 
-                                            tagListLinks   : [{link: "", title: "TypeScript"}, {link: "", title: "C++"}]
+                                            heading         : 'Implementation', 
+                                            tagListLinks    : [
+                                                                {link: "https://github.com/JLSeto/DataStructures/tree/main/tS_jS/src/unionfind", title: "TypeScript"}, 
+                                                                {link: "", title: "C++"}
+                                                              ]
                                         }
                                     ],
                 hardware       :    [],
@@ -187,8 +190,11 @@ export class BlogComponent implements OnInit
                                                         Double - can traverse backwards, but costs 2x memory`,
                                         },
                                         {
-                                            heading   : 'Implementation', 
-                                            tagListLinks   : [{link: "", title: "TypeScript"}, {link: "", title: "C++"}]
+                                            heading         : 'Implementation', 
+                                            tagListLinks    : [
+                                                                {link: "https://github.com/JLSeto/DataStructures/tree/main/tS_jS/src/linkedlist", title: "TypeScript"},
+                                                                {link: "", title: "C++"}
+                                                              ]
                                         }
                                     ],
                 hardware       :    [],
@@ -240,8 +246,11 @@ export class BlogComponent implements OnInit
                                             tagList   : [`Number of Islands`]
                                         },
                                         {
-                                            heading   : 'Implementation', 
-                                            tagListLinks   : [{link: "", title: "TypeScript"}, {link: "", title: "C++"}]
+                                            heading         : 'Implementation', 
+                                            tagListLinks    : [
+                                                                {link: "https://github.com/JLSeto/DataStructures/tree/main/tS_jS/src/hashtable", title: "TypeScript"}, 
+                                                                {link: "", title: "C++"}
+                                                              ]
                                         }
                                     ],
                 hardware       :    [],
