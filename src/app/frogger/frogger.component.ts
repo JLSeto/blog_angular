@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { HelperService } from '../helpers/services/helper.service';
 
 @Component({
@@ -13,11 +13,11 @@ export class FroggerComponent implements OnInit
 
     public engine: Engine = null as any;
 
-    constructor(public hS: HelperService, public cd: ChangeDetectorRef){ }
+    constructor(public hS: HelperService){ }
 
     ngOnInit(): void
     {
-        this.engine = new Engine(this.canvas, this.cd);
+        this.engine = new Engine(this.canvas);
     }
 }
 
@@ -43,7 +43,10 @@ class Engine
     public winCounter   : number = 0;
     public loseCounter  : number = 0;
 
-    constructor(private canvas : ElementRef<HTMLCanvasElement>, public cd: ChangeDetectorRef)
+    //Key Location
+    public keyColumn: number = Math.floor(Math.random() * (6 - 1) + 1);
+
+    constructor(private canvas : ElementRef<HTMLCanvasElement>)
     {
         this.initializeResources();
         this.initializeCanvas();
@@ -86,12 +89,12 @@ class Engine
 
     private initializeApp() : void
     {
-        this.keyItem = new KeyItem(this.ctx, this.Resources, this.cd);
-        this.player = new Player(this.ctx, this.Resources, this.cd, this.keyItem);
+        this.keyItem = new KeyItem(this.ctx, this.Resources, this.keyColumn);
+        this.player = new Player(this.ctx, this.Resources, this.keyItem);
 
         for(let i = 0; i < 2; i++)
         {
-            this.allEnemies.push(new Enemy(this.ctx, this.Resources, this.cd, this.player));
+            this.allEnemies.push(new Enemy(this.ctx, this.Resources, this.player));
         }
     }
 
@@ -143,8 +146,11 @@ class Engine
                     this.gotKey = false;
                     for(let i = 0; i < 2; i++)
                     {
-                        this.allEnemies.push(new Enemy(this.ctx, this.Resources, this.cd, this.player));
+                        this.allEnemies.push(new Enemy(this.ctx, this.Resources, this.player));
                     }
+
+                    this.keyColumn = Math.floor(Math.random() * (6 - 1) + 1);
+                    this.keyItem.x = (this.keyColumn - 1) * 101;
                     clearInterval(refreshInteval);
                 }
                 
@@ -185,7 +191,7 @@ class Engine
         {
             for (col = 0; col < numCols; col++)
             {
-                if(row == 0 && col == numCols - 1)
+                if(row == 0 && col == this.keyColumn - 1)
                 {
                     this.ctx!.drawImage(this.Resources.get('/assets/frogger/stone-block.png'), col * 101, row * 83);
                 }
@@ -313,7 +319,7 @@ class Player
     public y        : number = 374.5;
     public disable  : boolean = false;
 
-    constructor(private ctx: CanvasRenderingContext2D | null, private resources: Resources, private cd: ChangeDetectorRef, private keyItem: KeyItem)
+    constructor(private ctx: CanvasRenderingContext2D | null, private resources: Resources, private keyItem: KeyItem)
     {
         this.arrChar = 
         [
@@ -370,7 +376,6 @@ class Player
     {
         this.ctx?.drawImage(this.resources.get(this.sprite), this.x, this.y);
         this.ctx?.save();
-        this.cd.detectChanges();
     }
 
     public changeCharacter() : void
@@ -387,7 +392,7 @@ class Enemy
     public y        : number = 0;
     private speed   : number = Math.floor(Math.random()*400);
 
-    constructor(private ctx: CanvasRenderingContext2D | null, private resources: Resources, private cd: ChangeDetectorRef, private player: Player)
+    constructor(private ctx: CanvasRenderingContext2D | null, private resources: Resources, private player: Player)
     {
         this.y = this.randomEnemies();
     }
@@ -424,7 +429,6 @@ class Enemy
     {
         this.ctx?.drawImage(this.resources.get(this.sprite), this.x, this.y);
         this.ctx?.save();
-        //this.cd.detectChanges();
     }
 }
 
@@ -435,7 +439,10 @@ class KeyItem
     public x        : number    = 404;
     public y        : number    = -40.5;
 
-    constructor(private ctx: CanvasRenderingContext2D | null, private resources: Resources, private cd: ChangeDetectorRef){}
+    constructor(private ctx: CanvasRenderingContext2D | null, private resources: Resources, private keyColumn: number)
+    {
+        this.x = 101 * (keyColumn - 1);
+    }
 
     public render = () : void => 
     {
@@ -447,7 +454,6 @@ class KeyItem
         {
             this.ctx?.drawImage(this.resources.get(this.sprite), this.x, this.y);
             this.ctx?.save();
-            this.cd.detectChanges();
         }
     }
 }
