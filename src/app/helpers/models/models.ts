@@ -29,6 +29,7 @@ export class Details
 {
     heading?        : string; 
     notes?          : string; 
+    notesJP?        : string; 
     list?           : string[];
     tableListHead?  : {rightHead?: string, right2Head?: string};
     tableList?      : {left: string, right: string, right2?: string}[];

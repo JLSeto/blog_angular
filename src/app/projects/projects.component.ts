@@ -78,18 +78,18 @@ export class ProjectsComponent implements OnInit
                 image          : "/assets/voiceGengo/voiceGengo.png", 
                 title          : "Voice Gengo",
                 date           : new Date("March 08, 2021"),
-                subtitle       : "Full Stack Web Development, FrontEnd, BackEnd, OWASP", 
+                subtitle       : "Full Stack Web Development, FrontEnd, BackEnd, OWASP, Localization, Stripe API, Web Sockets", 
                 description    : "A community voice app for Japanese and English aimed to help improve pronunciation",
                 link           : "voiceGengo",
                 details        :    [
                                         { 
                                             heading   : 'Overview', 
                                             notes     : `Voice Gengo was a full stack web development project I did with the aim
-                                                        of helping people speak a language better.  The app supports 2 languages:
+                                                        of helping people speak a language better.  The app currently supports 2 languages:
                                                         English and Japanese.  In the app you can create posts, write notebooks,
                                                         and record yourself speaking the language you are learning.  You would be able to 
-                                                        share the above with Native Speakers of the language.  
-                                                        While all of these features were free to use, I did include paid
+                                                        share these things with Native Speakers of the language.  
+                                                        While all of these features are free to use, I did include paid
                                                         features such as scheduling lessons with a tutor and getting voice recordings 
                                                         or notebook entries corrected.  Unfortunately, the website was not a hit (possibly I had a very niche field
                                                         or maybe I did not market it well enough).  However, going through the entire 
@@ -118,7 +118,8 @@ export class ProjectsComponent implements OnInit
                                         'Angular',
                                         'Node.js',
                                         'Stripe API',
-                                        'Socket.io'
+                                        'Socket.io',
+                                        'Google Analytics'
 
                                     ],
                 references     :    [
