@@ -33,8 +33,8 @@ export class BlogComponent implements OnInit
         {
           if(val instanceof NavigationEnd) 
           {
-                this.setiFrame(val.url);
-              this.reInitialize(val.url);
+            this.setiFrame(val.url);
+            this.reInitialize(val.url);
           }
         });
     }
@@ -204,7 +204,7 @@ export class BlogComponent implements OnInit
             {
                 type           : ["Data Structures"],
                 image          : "", 
-                title          : "Hash Map",
+                title          : "Hash Table",
                 date           : new Date("August 12, 2021"),
                 subtitle       : "TypeScript, C++", 
                 description    : "Notes on the Hash Table Data Structure",
@@ -243,7 +243,7 @@ export class BlogComponent implements OnInit
                                         },
                                         {
                                             heading   : 'Practice', 
-                                            tagList   : [`Number of Islands`]
+                                            tagList   : [`Two Sum`]
                                         },
                                         {
                                             heading         : 'Implementation', 
@@ -257,6 +257,84 @@ export class BlogComponent implements OnInit
                 software       :    [],
                 references     :    [],
             },
+            {
+                type           : ["Data Structures"],
+                image          : "", 
+                title          : "Priority Queue | Min/Max Heap",
+                date           : new Date("August 12, 2021"),
+                subtitle       : "TypeScript, C++", 
+                description    : "Notes on the Priority Queue abstract data type and the Heap data structure",
+                link           : "priorityqueue",
+                details        :    [
+                                        { 
+                                            heading   : 'What is a Priority Queue (PQ)?', 
+                                            notes     : `An abstract data type that operates similar to a normal queue
+                                                        except that each element has a certain priority.  The priority of the elements in the PQ
+                                                        determine the order in which elements are removed from the PQ.  Data must be comparable 
+                                                        (must be able to be ordered from least to greates or vice versa).`,
+                                        },
+                                        { 
+                                            heading   : 'What is a Heap?', 
+                                            notes     : `A tree based Data Strucutres that satisfies the heap invariant: If A is a parent node
+                                                        of B, then A is ordered with respect to B for all nodes A & B in the Heap. 
+                                                        Example: Min Heap / Max Heap`,
+                                        },
+                                        {
+                                            heading   : 'When / Where?', 
+                                            list      : 
+                                                        [
+                                                            "Certain Implementations of Dijkstra's Shortest Path", 
+                                                            "Dynamically fetch next best or worst element", 
+                                                            "Huffman Coding (loessless data compression)", 
+                                                            "BFS algorithms", 
+                                                            "Minimum Spanning Tree Algorithms"
+                                                        ]
+                                        },
+                                        {
+                                            heading   : 'Complexity',
+                                            tableList : 
+                                                        [
+                                                            {left: "Construction",          right: "O(n)"},
+                                                            {left: "Polling",               right: "O(log n)"},
+                                                            {left: "Peeking",               right: "O(1)"},
+                                                            {left: "Adding",                right: "O(log n)"},
+                                                            {left: "Naive Removing",        right: "O(n)"},
+                                                            {left: "Advance Remove",        right: "O(log n)"},
+                                                            {left: "Naive Contains",        right: "O(n)"},
+                                                            {left: "Contains Check",        right: "O(1)"},
+                                                        ]
+                                        },
+                                        { 
+                                            heading   : 'Binary Heap Representation', 
+                                            notes     : `Adding - Bottom up (Swim) <br>
+                                                         Removing - Bubble Down (Sink) <br><br>
+                                                         left: 2*i + 1; <br>
+                                                         right: 2*i + 2; <br><br>
+                                                         Removing Elements - <br>
+                                                         1. Swap root with last element. <br> 
+                                                         2. Remove the root after swapped. <br>
+                                                         3. Bubble Down <br><br>
+                                                         [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]<br>
+                                                         [9, 8, 7, 6, 5, 1, 2, 2, 2, 3, &nbsp;&nbsp;4, &nbsp;&nbsp;0, &nbsp;&nbsp;1, &nbsp;&nbsp;&nbsp;2, &nbsp;&nbsp;1]`,
+                                            img       : '/assets/blog/binaryHeap/binaryHeap.png'
+                                                
+                                        },
+                                        {
+                                            heading   : 'Practice', 
+                                            tagList   : ['Merge k Sorted Lists', 'Find Median from Data Stream', 'Top K Frequent Elements']
+                                        },
+                                        {
+                                            heading         : 'Implementation', 
+                                            tagListLinks    : [
+                                                                {link: "https://github.com/JLSeto/DataStructures/tree/main/tS_jS/src/priorityqueue", title: "TypeScript"}, 
+                                                                {link: "", title: "C++"}
+                                                              ]
+                                        }
+                                    ],
+                hardware       :    [],
+                software       :    [],
+                references     :    [],
+            }
         ];
     }
 }
