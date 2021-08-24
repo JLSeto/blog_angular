@@ -357,7 +357,7 @@ export class BlogComponent implements OnInit
                                                 <li>
                                                     An graph in which any two vertices are connected by exactly one path
                                                 </li>
-                                            </ul><br>
+                                            </ul>
                                             Child - a node extending from another node <br>
                                             Leaf Node - no children <br>
                                             Subtree - a tree contained entirely within another`,
