@@ -334,6 +334,109 @@ export class BlogComponent implements OnInit
                 hardware       :    [],
                 software       :    [],
                 references     :    [],
+            },
+            {
+                type           : ["Data Structures"],
+                image          : "", 
+                title          : "Binary Search Tree",
+                date           : new Date("August 12, 2021"),
+                subtitle       : "TypeScript, C++", 
+                description    : "Notes on the Binary Search Tree Data Structure",
+                link           : "binarysearchtree",
+                details        :    [
+                                        { 
+                                            heading   : 'What is a tree?', 
+                                            notes     : `A tree is an undirected graph which satisfies any 3: <br>
+                                            <ul>
+                                                <li>
+                                                    An acyclic connected graph
+                                                </li>
+                                                <li>
+                                                    A connected graph with N nodes and N - 1 edges
+                                                </li>
+                                                <li>
+                                                    An graph in which any two vertices are connected by exactly one path
+                                                </li>
+                                            </ul><br>
+                                            Child - a node extending from another node <br>
+                                            Leaf Node - no children <br>
+                                            Subtree - a tree contained entirely within another`,
+                                        },
+                                        { 
+                                            heading   : 'What is a Binary Tree?', 
+                                            notes     : `A tree that has at most two children pre node`,
+                                        },
+                                        { 
+                                            heading   : 'What is a Binary Search Tree?', 
+                                            notes     : `A binary tree that satisfies the BST invariant:<br>
+                                                        - Left subtree has smaller elements <br>
+                                                        - Right subtree has larger elements`,
+                                        },
+                                        { 
+                                            heading   : 'When/where Binary Search Tree?', 
+                                            list      : 
+                                            [
+                                                'Implementation of some Maps & Abstract Data Structures', 
+                                                'Red & Black Trees',
+                                                'AVL Trees (Adelson-Velskii and Landis)',
+                                                'Splay Trees',
+                                                'Binary Heaps',
+                                                'Syntax trees (used by compiler & calculators',
+                                                'Treap - probabilistic Data Structure'
+                                            ],
+                                        },
+                                        {
+                                            heading   : 'Time Complexity',
+                                            tableListHead: {rightHead: "Average", right2Head: "Worst"}, 
+                                            tableList : 
+                                                        [
+                                                            {left: "Insert",    right: "O(log(n))", right2: "O(n)"},
+                                                            {left: "Delete",    right: "O(log(n))", right2: "O(n)"},
+                                                            {left: "Remove",    right: "O(log(n))", right2: "O(n)"},
+                                                            {left: "Search",    right: "O(log(n))", right2: "O(n)"}
+                                                        ]
+                                        },
+                                        { 
+                                            heading   : 'Insertion', 
+                                            list      : 
+                                                        [
+                                                            'Recurse down left or right subtree', 
+                                                            'Handle Finding a duplicate value', 
+                                                            'create a new node (null leaf)'
+                                                        ],
+                                        },
+                                        { 
+                                            heading   : 'Removing', 
+                                            list      : 
+                                                        [
+                                                            'Find element we want to remove', 
+                                                            'Replace the node we want to remove with its successor to maintain BST invariant'
+                                                        ],
+                                        },
+                                        { 
+                                            heading   : 'Traversal', 
+                                            list      : 
+                                                        [
+                                                            'PreOrder  - prints before recursive calls', 
+                                                            'InOrder   - prints between recursive calls',
+                                                            'PostOrder - prints after recursive calls',
+                                                        ],
+                                        },
+                                        {
+                                            heading   : 'Practice', 
+                                            tagList   : [`Validate Binary Search Tree`, 'Convert Sorted Array to Binary Search Tree', 'Binary Search Tree Iterator']
+                                        },
+                                        {
+                                            heading         : 'Implementation', 
+                                            tagListLinks    : [
+                                                                {link: "https://github.com/JLSeto/DataStructures/tree/main/tS_jS/src/binarysearchtree", title: "TypeScript"}, 
+                                                                {link: "", title: "C++"}
+                                                              ]
+                                        }
+                                    ],
+                hardware       :    [],
+                software       :    [],
+                references     :    [],
             }
         ];
     }
