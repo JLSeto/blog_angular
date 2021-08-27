@@ -180,7 +180,7 @@ export class BlogComponent implements OnInit
                                             tableList : 
                                                         [
                                                             {left: "Remove head",   right: "O(1)", right2: "O(1)"},
-                                                            {left: "Remove Tail",   right: "O(n) <- need to set new tail next to null", right2: "O(1)"},
+                                                            {left: "Remove Tail",   right: "O(n) ~ need to set new tail next to null", right2: "O(1)"},
                                                             {left: "Remove Middle", right: "O(n)", right2: "O(n)"}
                                                         ]
                                         },
