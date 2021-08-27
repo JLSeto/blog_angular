@@ -22,7 +22,6 @@ export class AppComponent
   ngAfterViewInit(): void 
   {
     this.sN.setSidenav(this.sidenav); //Control the sidenav from navbar component
-    console.log(this.sidenav)
   }
 
   @HostListener('window:resize', ['$event']) onResize(event: any) 
