@@ -275,7 +275,7 @@ export class BlogComponent implements OnInit
                                         },
                                         { 
                                             heading   : 'What is a Heap?', 
-                                            notes     : `A tree based Data Strucutres that satisfies the heap invariant: If A is a parent node
+                                            notes     : `A tree based Data Structure that satisfies the heap invariant: If A is a parent node
                                                         of B, then A is ordered with respect to B for all nodes A & B in the Heap. 
                                                         Example: Min Heap / Max Heap`,
                                         },
