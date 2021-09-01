@@ -65,10 +65,15 @@ export class NavbarComponent implements OnInit
 
   configureGTAG(event : NavigationEnd)
   {
-    gtag('config', 'G-JBDYNJFL65', 
+    gtag('config', 'UA-108597035-1', 
     {
         'page_path': event.urlAfterRedirects
     });
+
+    // gtag('config', 'G-JBDYNJFL65', 
+    // {
+    //     'page_path': event.urlAfterRedirects
+    // });
   }
 
 }

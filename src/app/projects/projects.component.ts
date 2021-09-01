@@ -84,11 +84,11 @@ export class ProjectsComponent implements OnInit
                 details        :    [
                                         { 
                                             heading   : 'Overview', 
-                                            notes     : `Voice Gengo was a full stack web development project I did with the aim
+                                            notes     : `Voice Gengo is a full stack web development project I did with the aim
                                                         of helping people speak a language better.  The app currently supports 2 languages:
                                                         English and Japanese.  In the app you can create posts, write notebooks,
-                                                        and record yourself speaking the language you are learning.  You would be able to 
-                                                        share these things with Native Speakers of the language.  
+                                                        and record yourself speaking the language you are learning.  You are also able to 
+                                                        share your posts, notes, or recordings with Native Speakers of the language.  
                                                         While all of these features are free to use, I did include paid
                                                         features such as scheduling lessons with a tutor and getting voice recordings 
                                                         or notebook entries corrected.  Unfortunately, the website was not a hit (possibly I had a very niche field
@@ -148,7 +148,8 @@ export class ProjectsComponent implements OnInit
                                             the data is graphed and displayed for the user. From the webpage, a user can also control 
                                             the Arduino101’s sampling frequency. With a click of a button, the user can send a new sampling time all 
                                             the way back to the Arduino101. The change is instantaneous and can be visually seen on the webpage. 
-                                            The below diagram illustrates a general overview of this project.`,
+                                            The below diagram illustrates a general overview of this project. <br>
+                                            <a href="https://jlseto.github.io">jlseto.github.io</a>`,
                                             img       : '/assets/microController/arduino101/arduino101_diagram_db.png'
                                         },
                                         {
@@ -248,6 +249,41 @@ export class ProjectsComponent implements OnInit
                                         {link: 'https://github.com/websockets/ws'                               , title: 'WebSockets'},
                                         {link: 'https://www.npmjs.com/package/node-red-contrib-scx-ibmiotapp'   , title: 'ibmiotapp'},
                                         {link: 'https://www.npmjs.com/package/node-red-contrib-scx-ibmiotapp'   , title: 'Google Charts'},
+                                    ],
+            },
+            {
+                type           : ["Web Components"],
+                image          : "/assets/jekyll/jekyll.png", 
+                title          : "Static Website with Jekyll",
+                date           : new Date("November 11, 2017"),
+                subtitle       : "Website built using Jekyll and Bootstrap", 
+                description    : "A static website built using Jekyll hosting old projects",
+                link           : "static-jekyll",
+                details        :    [
+                                        { 
+                                            heading   : 'Overview', 
+                                            notes     : `This website was created using Jekyll and is hosted on github. 
+                                                        Jekyll is a static website generator, and allows you to quickly create a blog 
+                                                        with some html and css. There are a lot of tutorials and examples 
+                                                        online on how to get set-up and started. For my website, 
+                                                        I use Bootstrap as a frontend framework which makes the 
+                                                        site quite compatible with mobile devices. Bootstrap also has 
+                                                        nice features such as navigation bars and jumbotrons. Font Awesome is used 
+                                                        for the social icons in the navigation bar, and SASS is 
+                                                        used to organize some of my custom CSS files.
+                                                        To create the Japanese version of this site, I create a 
+                                                        duplicate entry for each corresponding English page and assign 
+                                                        each corresponding entry a reference id. A small script is then written in Jekyll’s Liquid to sort the pages, and deliver the corresponding translation page to the one currently loaded. This feature can be accessed from the Navigation bar. The source code for my website is available on my github.`,
+                                            img       : "/assets/jekyll/jekyll.png"
+                                        }
+
+                                    ],
+                hardware       :    [],
+                software       :    ['Html', 'CSS', 'JavaScript', 'BootStrap', 'Github Pages'],
+                references     :    [
+                                        {link: 'https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/', title: 'Setting up your GitHub Pages site locally with Jekyll '},
+                                        {link: 'http://jmcglone.com/guides/github-pages/'                                               , title: 'Creating and Hosting a Personal Site on GitHub'},
+                                        {link: 'https://www.sylvaindurand.org/making-jekyll-multilingual/'                              , title: 'Making Jekyll multilingual '}
                                     ],
             }
         ];
