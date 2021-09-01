@@ -4,7 +4,7 @@ This the source code for my static blog hosted on github.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.12.
 
-Please visit JLSeto.github.io to see how it runs:)
+Please visit JimmySeto.com to see how it runs:)
 
 <!-- ## Development server
 
