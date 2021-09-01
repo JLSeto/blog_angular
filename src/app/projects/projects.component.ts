@@ -148,8 +148,7 @@ export class ProjectsComponent implements OnInit
                                             the data is graphed and displayed for the user. From the webpage, a user can also control 
                                             the Arduino101’s sampling frequency. With a click of a button, the user can send a new sampling time all 
                                             the way back to the Arduino101. The change is instantaneous and can be visually seen on the webpage. 
-                                            The below diagram illustrates a general overview of this project. <br>
-                                            <a href="https://jlseto.github.io">jlseto.github.io</a>`,
+                                            The below diagram illustrates a general overview of this project.`,
                                             img       : '/assets/microController/arduino101/arduino101_diagram_db.png'
                                         },
                                         {
@@ -273,7 +272,10 @@ export class ProjectsComponent implements OnInit
                                                         used to organize some of my custom CSS files.
                                                         To create the Japanese version of this site, I create a 
                                                         duplicate entry for each corresponding English page and assign 
-                                                        each corresponding entry a reference id. A small script is then written in Jekyll’s Liquid to sort the pages, and deliver the corresponding translation page to the one currently loaded. This feature can be accessed from the Navigation bar. The source code for my website is available on my github.`,
+                                                        each corresponding entry a reference id. A small script is then written in Jekyll’s Liquid to sort the pages, 
+                                                        and deliver the corresponding translation page to the one currently loaded. This feature can be accessed from the Navigation bar. 
+                                                        The source code for my website is available on my github. <br>
+                                                        <a href="https://jlseto.github.io">jlseto.github.io</a>`,
                                             img       : "/assets/jekyll/jekyll.png"
                                         }
 
