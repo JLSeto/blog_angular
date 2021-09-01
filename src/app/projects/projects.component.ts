@@ -255,7 +255,7 @@ export class ProjectsComponent implements OnInit
                 image          : "/assets/jekyll/jekyll.png", 
                 title          : "Static Website with Jekyll",
                 date           : new Date("November 11, 2017"),
-                subtitle       : "Website built using Jekyll and Bootstrap", 
+                subtitle       : "Jekyll, BootStrap, Html, CSS, JavasScript, Github Pages, Google Analytics", 
                 description    : "A static website built using Jekyll hosting old projects",
                 link           : "static-jekyll",
                 details        :    [
