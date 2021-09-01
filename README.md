@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # PortfolioBlog
 
 This the source code for my static blog hosted on github.
@@ -30,15 +29,3 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page. -->
-=======
-JLSeto.github.io
-
-sudo apt-get install ruby-full
-
-gem install bundler
-
-bundle install
-
-./startserver.sh
- 
->>>>>>> 5d184b789537a7d0515f43e8d00dc4402925716b
