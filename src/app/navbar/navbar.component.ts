@@ -65,7 +65,7 @@ export class NavbarComponent implements OnInit
 
   configureGTAG(event : NavigationEnd)
   {
-    gtag('config', 'UA-108597035-1', 
+    gtag('config', 'G-3DQVQDVCCQ', 
     {
         'page_path': event.urlAfterRedirects
     });
