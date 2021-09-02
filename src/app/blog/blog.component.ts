@@ -76,13 +76,12 @@ export class BlogComponent implements OnInit
 
     checkFilter(obj : Projects) : boolean
     {
-
         return ((this.selectedFB == 'All') || (obj.type.includes(this.selectedFB))) ? true : false;
     }
 
     setFilter(str : string) : void
     {
-        this.selectedFB = str;
+        this.hS.projselectedFB = this.selectedFB = str;
     }
 
     ngOnDestroy()

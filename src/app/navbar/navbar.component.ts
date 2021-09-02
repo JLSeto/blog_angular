@@ -32,8 +32,8 @@ export class NavbarComponent implements OnInit
     this.navLinks = 
     [
       {desc: 'About',           link: '/'             }, 
-      {desc: 'Projects',        link: 'projects'      }, 
-      {desc: 'Study Notes',     link: 'notes'         }
+      {desc: 'Projects',        link: 'projects/'     }, 
+    //   {desc: 'Study Notes',     link: 'notes'         }
     ];
     
     this._routerSub = router.events.subscribe((val) => 

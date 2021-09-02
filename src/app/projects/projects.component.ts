@@ -78,7 +78,7 @@ export class ProjectsComponent implements OnInit
                 image          : "/assets/voiceGengo/voiceGengo.png", 
                 title          : "Voice Gengo",
                 date           : new Date("March 08, 2021"),
-                subtitle       : "Full Stack Web Development, FrontEnd, BackEnd, OWASP, Localization, Stripe API, Web Sockets", 
+                subtitle       : "Full Stack Web Development, Angular, Typescript, Node.js, MongoDB, OWASP, Localization, Stripe API, Web Sockets", 
                 description    : "A community voice app for Japanese and English aimed to help improve pronunciation",
                 link           : "voiceGengo",
                 details        :    [
@@ -96,7 +96,7 @@ export class ProjectsComponent implements OnInit
                                                         process of building out the entire frontend and backend while following OWASP security practices
                                                         and deploying it on Google Cloud Compute was a great learning experience.  The site is currently online 
                                                         and is available at 
-                                                        <a href="https://voicegengo.com">VoiceGengo.com</a>`,
+                                                        <a href="https://voicegengo.com" target="_blank">VoiceGengo.com</a>`,
                                             img        :    '/assets/voiceGengo/voiceGengoScreen.png'
                                         },
                                         {
@@ -113,12 +113,15 @@ export class ProjectsComponent implements OnInit
                 hardware       :    [],
                 software       :    [
                                        'TypeScript',
+                                       'JavaScript',
                                         'MongoDB',
                                         'Express',
                                         'Angular',
                                         'Node.js',
                                         'Stripe API',
                                         'Socket.io',
+                                        'Amazon Web Services',
+                                        'Google Cloud',
                                         'Google Analytics'
 
                                     ],
@@ -275,7 +278,7 @@ export class ProjectsComponent implements OnInit
                                                         each corresponding entry a reference id. A small script is then written in Jekyll’s Liquid to sort the pages, 
                                                         and deliver the corresponding translation page to the one currently loaded. This feature can be accessed from the Navigation bar. 
                                                         The source code for my website is available on my github. <br>
-                                                        <a href="https://jlseto.github.io">jlseto.github.io</a>`,
+                                                        <a target="_blank" href="https://jlseto.github.io">jlseto.github.io</a>`,
                                             img       : "/assets/jekyll/jekyll.png"
                                         }
 
@@ -294,8 +297,9 @@ export class ProjectsComponent implements OnInit
         {
           if(val instanceof NavigationEnd) 
           {
-                this.setiFrame(val.url);
+              this.setiFrame(val.url);
               this.reInitialize(val.url);
+              this.selectedFB = this.hS.projselectedFB;
           }
         });
     }
@@ -337,12 +341,12 @@ export class ProjectsComponent implements OnInit
 
     checkFilter(obj : Projects) : boolean
     {
-
         return ((this.selectedFB == 'All') || (obj.type.includes(this.selectedFB))) ? true : false;
     }
 
     setFilter(str : string) : void
     {
+        this.hS.projselectedFB = str;
         this.selectedFB = str;
     }
 

@@ -11,6 +11,9 @@ export class HelperService
   private  innerWidth  : number = window.innerWidth;
   private  innerHeight : number = window.innerHeight;
 
+  public  projselectedFB : string = 'All';
+  public  noteselectedFB : string = 'All';
+
   constructor(private router: Router)
   {
     this.checkifMobile();
@@ -48,14 +51,14 @@ export class HelperService
     return this.innerHeight;
   }
 
-  public routerNavigateProject(link: string) : void
+  public routerNavigateProject(link: string, query?: string) : void
   {
-    this.router.navigate(['projects/' + link])
+    this.router.navigate(['projects/' + link], {queryParams: {a: query}})
   }
 
-  public routerNavigateNotes(link: string) : void
+  public routerNavigateNotes(link: string, query?: string) : void
   {
-    this.router.navigate(['notes/' + link])
+    this.router.navigate(['notes/' + link], {queryParams: {a: query}})
   }
 
 }

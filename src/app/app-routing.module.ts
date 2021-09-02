@@ -10,8 +10,8 @@ const routes: Routes =
   { path: '',                                       component: FrontpageComponent               },
   { path: 'projects',                               component: ProjectsComponent                },
   { path: 'projects/:title',                        component: ProjectsComponent                },
-  { path: 'notes',                                   component: BlogComponent                    },
-  { path: 'notes/:title',                            component: BlogComponent                    }
+  { path: 'notes',                                  component: BlogComponent                    },
+  { path: 'notes/:title',                           component: BlogComponent                    }
   //{ path: '**',                                     component: PageNotFoundComponent,           canActivate: [NeutralGuard]   }
 ];
 
