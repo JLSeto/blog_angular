@@ -7,13 +7,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './helpers/modules/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
+import { ChartsModule } from 'ng2-charts';
+
 import { NavbarComponent } from './navbar/navbar.component';
 import { FrontpageComponent } from './frontpage/frontpage.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { DisplayDatePipe } from './helpers/pipes/displayDate.pipe';
 import { iFrameView } from './projects/iframe-view';
 import { FroggerComponent } from './frogger/frogger.component';
-import { BlogComponent } from './blog/blog.component'
+import { BlogComponent } from './blog/blog.component';
+import { TestComponent } from './test/test.component'
 
 @NgModule({
   declarations: 
@@ -25,7 +28,8 @@ import { BlogComponent } from './blog/blog.component'
     DisplayDatePipe,
     iFrameView,
     FroggerComponent,
-    BlogComponent
+    BlogComponent,
+    TestComponent
   ],
   imports: 
   [
@@ -33,7 +37,8 @@ import { BlogComponent } from './blog/blog.component'
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

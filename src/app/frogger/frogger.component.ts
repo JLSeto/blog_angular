@@ -19,6 +19,14 @@ export class FroggerComponent implements OnInit
     {
         this.engine = new Engine(this.canvas);
     }
+
+    ngOnDestroy()
+    {
+        if(this.engine.windowRequest)
+        {
+            cancelAnimationFrame(this.engine.windowRequest);
+        }
+    }
 }
 
 // Engine
@@ -45,6 +53,9 @@ class Engine
 
     //Key Location
     public keyColumn: number = Math.floor(Math.random() * (6 - 1) + 1);
+
+    //Window Request Fraom
+    public windowRequest: any = null;
 
     constructor(private canvas : ElementRef<HTMLCanvasElement>)
     {
@@ -172,7 +183,6 @@ class Engine
         this.player.update();
     }
 
-
     private render() : void
     {
         let rowImages = 
@@ -223,7 +233,7 @@ class Engine
         this.update(dt);
         this.render();
         this.lastTime = now;
-        window.requestAnimationFrame(this.main);
+        this.windowRequest = window.requestAnimationFrame(this.main);
     }
 
     private init = () =>
